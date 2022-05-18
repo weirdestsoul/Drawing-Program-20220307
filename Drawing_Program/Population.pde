@@ -1,7 +1,7 @@
 //Global Variables
 //
 void population() {
-  drawingSurfaceX = displayWidth*0;
+  drawingSurfaceX = displayWidth*1/4;
   drawingSurfaceY = displayHeight*0;
   drawingSurfaceWidth = displayWidth*3/4;
   drawingSurfaceHeight = displayHeight*4/5;

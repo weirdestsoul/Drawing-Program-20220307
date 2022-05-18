@@ -5,7 +5,7 @@ float quitButtonX, quitButtonY, quitButtonWidth, quitButtonHeight;
 float drawingDiameter;
 float secondTextX, secondTextY, secondTextWidth, secondTextHeight;
 int reset = 1;
-color white = #FFFFFF, resetColour = white, red = #FF0303, black = 0, quitButtonColour;
+color white = #FFFFFF, resetColour = white, red = #FF0303, black = 0, quitButtonColour, GUI = #969EA5;
 PFont font;
 int initialFontSize = 55;
 int size;
@@ -20,7 +20,9 @@ void setup() {
   //
   font = createFont ("Comic Sans MS", initialFontSize);
   //
+  noStroke();
   rect(drawingSurfaceX, drawingSurfaceY, drawingSurfaceWidth, drawingSurfaceHeight);
+  stroke(1);
 }//End setup
 //
 void draw() {
@@ -32,6 +34,13 @@ quitButtonColour = red;
 } else {
 quitButtonColour = black;
 }//End Quit Button Hoverover
+//GUI
+fill(GUI);
+noStroke();
+rect(0, 0, displayWidth*1/4, displayHeight);
+rect(0, displayHeight*4/5, displayWidth, displayHeight*1/5);
+stroke(1);
+fill(resetColour);
 //
 fill(quitButtonColour);
 noStroke();
