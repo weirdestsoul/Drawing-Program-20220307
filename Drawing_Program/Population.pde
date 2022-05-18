@@ -10,4 +10,8 @@ void population() {
   quitButtonY = displayHeight*0;
   quitButtonWidth = displayWidth*1/10; // 2/20=1/10
   quitButtonHeight = displayHeight*1/20;
+  secondTextX = quitButtonX;
+  secondTextY = displayHeight*1/20;
+  secondTextWidth = quitButtonWidth;
+  secondTextHeight = quitButtonHeight;
 }//End population

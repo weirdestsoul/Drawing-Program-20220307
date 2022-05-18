@@ -3,15 +3,18 @@ Boolean drawLine = false, drawCircle = false;
 float drawingSurfaceX, drawingSurfaceY, drawingSurfaceWidth, drawingSurfaceHeight;
 float quitButtonX, quitButtonY, quitButtonWidth, quitButtonHeight;
 float drawingDiameter;
+float secondTextX, secondTextY, secondTextWidth, secondTextHeight;
 int reset = 1;
 color white = #FFFFFF, resetColour = white, red = #FF0303, black = 0, quitButtonColour;
 PFont font;
-int initialFontSize = 55, size;
+int initialFontSize = 55;
+int size;
 String quitButtonString = "QUIT";
+String secondTextString = "Waluigi!";
 //
 void setup() {
   //Manditory: Mistaken display orientation should break app, feedback to console CANVAS
-  frameRate(240);
+  frameRate(144);
   fullScreen(); //displayWidth, displayHeight
   population();
   //
@@ -22,29 +25,38 @@ void setup() {
 //
 void draw() {
 if (drawLine==true && mouseX>=drawingSurfaceX && mouseX<=drawingSurfaceX+drawingSurfaceWidth && mouseY>=drawingSurfaceY && mouseY<=drawingSurfaceY+drawingSurfaceHeight) {line( mouseX, mouseY, pmouseX, pmouseY );}
-if (drawCircle==true && mouseX>=drawingSurfaceX && mouseX<=drawingSurfaceX+drawingSurfaceWidth && mouseY>=drawingSurfaceY && mouseY<=drawingSurfaceY+drawingSurfaceHeight) ellipse ( mouseX, mouseY, drawingDiameter, drawingDiameter ); //Circle drawing tool
+if (drawLine==true && mouseX>=drawingSurfaceX && mouseX<=drawingSurfaceX+drawingSurfaceWidth && mouseY>=drawingSurfaceY && mouseY<=drawingSurfaceY+drawingSurfaceHeight) ellipse ( mouseX, mouseY, drawingDiameter, drawingDiameter ); //Circle drawing tool
 //
 if (mouseX>=quitButtonX && mouseX<=quitButtonX + quitButtonWidth && mouseY>=quitButtonY && mouseY<=quitButtonY+quitButtonHeight) {
 quitButtonColour = red;
 } else {
 quitButtonColour = black;
-//Text, Quit Button
-fill(black);
-textAlign (CENTER, CENTER);
-fill(resetColour);
-//
-size = 30; //Change until fit
-textFont(font, size);
-text(quitButtonString, quitButtonX, quitButtonY, quitButtonWidth, quitButtonHeight);
-//
-//
-
 }//End Quit Button Hoverover
-
+//
 fill(quitButtonColour);
 noStroke();
 rect(quitButtonX,quitButtonY, quitButtonWidth, quitButtonHeight);
 stroke(reset);
+fill(resetColour);
+//
+//Text, Quit Button
+fill(black);
+textAlign (CENTER, CENTER);
+size = 40; //Change until fit
+textFont(font, size);
+text(quitButtonString, quitButtonX, quitButtonY, quitButtonWidth, quitButtonHeight);
+fill(resetColour);
+//
+//Second rectangle with more text
+fill(white);
+rect(secondTextX, secondTextY, secondTextWidth, secondTextHeight);
+fill(black); //Ink
+//
+fill(black);
+textAlign (CENTER, CENTER);
+size = 40; //Change until fit
+textFont(font, size);
+text(secondTextString, secondTextX, secondTextY, secondTextWidth, secondTextHeight);
 fill(resetColour);
 }//End draw
 //
@@ -60,8 +72,14 @@ void mousePressed() {
   if (mouseX>=drawingSurfaceX && mouseX<=drawingSurfaceX+drawingSurfaceWidth && mouseY>=drawingSurfaceY && mouseY<=drawingSurfaceY+drawingSurfaceHeight) { 
   if (drawLine == false) {
     drawLine = true;
-  } else{
+  } else {
     drawLine = false;}}//Button Paper (Drawing Surface)
+//
  
 }//End mousePressed
+
+void mouseReleased(){
+drawLine=false; 
+drawCircle=false;
+}
 //End MAIN
