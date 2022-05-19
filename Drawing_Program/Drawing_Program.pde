@@ -1,5 +1,5 @@
 //Global Variables
-Boolean drawLine = false, drawCircle = false;
+Boolean drawLine = false, drawCircle = false, paper=false;
 float drawingSurfaceX, drawingSurfaceY, drawingSurfaceWidth, drawingSurfaceHeight;
 float quitButtonX, quitButtonY, quitButtonWidth, quitButtonHeight;
 float drawingDiameter;
@@ -17,6 +17,9 @@ void setup() {
 }//End setup
 //
 void draw() {
+  if (paper==true) {
+    GUISetup();
+  }
 if (drawLine==true && mouseX>=drawingSurfaceX && mouseX<=drawingSurfaceX+drawingSurfaceWidth && mouseY>=drawingSurfaceY && mouseY<=drawingSurfaceY+drawingSurfaceHeight) {line( mouseX, mouseY, pmouseX, pmouseY );}
 if (drawLine==true && mouseX>=drawingSurfaceX && mouseX<=drawingSurfaceX+drawingSurfaceWidth && mouseY>=drawingSurfaceY && mouseY<=drawingSurfaceY+drawingSurfaceHeight) ellipse ( mouseX, mouseY, drawingDiameter, drawingDiameter ); //Circle drawing tool
 //
@@ -39,25 +42,11 @@ rect(quitButtonX,quitButtonY, quitButtonWidth, quitButtonHeight);
 stroke(reset);
 fill(resetColour);
 //
-//Text, Quit Button
-fill(black);
-textAlign (CENTER, CENTER);
-size = 40; //Change until fit
-textFont(font, size);
-text(quitButtonString, quitButtonX, quitButtonY, quitButtonWidth, quitButtonHeight);
-fill(resetColour);
-//
 //Second rectangle with more text
 fill(white);
 rect(secondTextX, secondTextY, secondTextWidth, secondTextHeight);
 fill(black); //Ink
-//
-fill(black);
-textAlign (CENTER, CENTER);
-size = 40; //Change until fit
-textFont(font, size);
-text(secondTextString, secondTextX, secondTextY, secondTextWidth, secondTextHeight);
-fill(resetColour);
+textDraw();
 }//End draw
 //
 void keyPressed() {
@@ -67,7 +56,6 @@ void keyPressed() {
 void mousePressed() {
   //Paper-Button
  if(mouseX>=quitButtonX && mouseX<=quitButtonX + quitButtonWidth && mouseY>=quitButtonY && mouseY<=quitButtonY+quitButtonHeight) exit();
-
   //
   if (mouseX>=drawingSurfaceX && mouseX<=drawingSurfaceX+drawingSurfaceWidth && mouseY>=drawingSurfaceY && mouseY<=drawingSurfaceY+drawingSurfaceHeight) { 
   if (drawLine == false) {
@@ -75,7 +63,7 @@ void mousePressed() {
   } else {
     drawLine = false;}}//Button Paper (Drawing Surface)
 //
- 
+ if (mouseX>=secondTextX && mouseX<=secondTextX+secondTextWidth && mouseX>= secondTextY && mouseY<=secondTextY+secondTextHeight) paper=true;
 }//End mousePressed
 
 void mouseReleased(){

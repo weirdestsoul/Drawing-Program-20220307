@@ -7,6 +7,22 @@ String secondTextString = "Waluigi!";
 //
 void textSetup() {
    font = createFont ("Comic Sans MS", initialFontSize);
-  
-  
 }//End textSetup
+//
+void textDraw() {
+//Text, Quit Button
+fill(black);
+textAlign (CENTER, CENTER);
+size = 40; //Change until fit
+textFont(font, size);
+text(quitButtonString, quitButtonX, quitButtonY, quitButtonWidth, quitButtonHeight);
+fill(resetColour);
+//
+//New paper Button
+fill(black);
+textAlign (CENTER, CENTER);
+size = 40; //Change until fit
+textFont(font, size);
+text(secondTextString, secondTextX, secondTextY, secondTextWidth, secondTextHeight);
+fill(resetColour);
+}//End textDraw
