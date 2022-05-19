@@ -6,23 +6,14 @@ float drawingDiameter;
 float secondTextX, secondTextY, secondTextWidth, secondTextHeight;
 int reset = 1;
 color white = #FFFFFF, resetColour = white, red = #FF0303, black = 0, quitButtonColour, GUI = #969EA5;
-PFont font;
-int initialFontSize = 55;
-int size;
-String quitButtonString = "QUIT";
-String secondTextString = "Waluigi!";
 //
 void setup() {
   //Manditory: Mistaken display orientation should break app, feedback to console CANVAS
   frameRate(144);
   fullScreen(); //displayWidth, displayHeight
   population();
-  //
-  font = createFont ("Comic Sans MS", initialFontSize);
-  //
-  noStroke();
-  rect(drawingSurfaceX, drawingSurfaceY, drawingSurfaceWidth, drawingSurfaceHeight);
-  stroke(1);
+  textSetup();
+  GUISetup();
 }//End setup
 //
 void draw() {
