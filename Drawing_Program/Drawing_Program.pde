@@ -23,29 +23,7 @@ void draw() {
 if (drawLine==true && mouseX>=drawingSurfaceX && mouseX<=drawingSurfaceX+drawingSurfaceWidth && mouseY>=drawingSurfaceY && mouseY<=drawingSurfaceY+drawingSurfaceHeight) {line( mouseX, mouseY, pmouseX, pmouseY );}
 if (drawLine==true && mouseX>=drawingSurfaceX && mouseX<=drawingSurfaceX+drawingSurfaceWidth && mouseY>=drawingSurfaceY && mouseY<=drawingSurfaceY+drawingSurfaceHeight) ellipse ( mouseX, mouseY, drawingDiameter, drawingDiameter ); //Circle drawing tool
 //
-if (mouseX>=quitButtonX && mouseX<=quitButtonX + quitButtonWidth && mouseY>=quitButtonY && mouseY<=quitButtonY+quitButtonHeight) {
-quitButtonColour = red;
-} else {
-quitButtonColour = black;
-}//End Quit Button Hoverover
-//GUI
-fill(GUI);
-noStroke();
-rect(0, 0, displayWidth*1/4, displayHeight);
-rect(0, displayHeight*4/5, displayWidth, displayHeight*1/5);
-stroke(1);
-fill(resetColour);
-//
-fill(quitButtonColour);
-noStroke();
-rect(quitButtonX,quitButtonY, quitButtonWidth, quitButtonHeight);
-stroke(reset);
-fill(resetColour);
-//
-//Second rectangle with more text
-fill(white);
-rect(secondTextX, secondTextY, secondTextWidth, secondTextHeight);
-fill(black); //Ink
+GUIDraw();
 textDraw();
 }//End draw
 //
