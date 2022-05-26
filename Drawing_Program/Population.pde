@@ -15,8 +15,8 @@ void population() {
   secondTextWidth = quitButtonWidth;
   secondTextHeight = quitButtonHeight;
   fillButton = displayWidth*1/35;
-  strokeWidth = displayWidth*1/36;
-  strokeHeight = displayWidth*2/36;
-  shapeWidth = displayWidth*1/36;
-  shapeHeight = displayWidth*2/36;
+  strokeWidth = displayWidth*1/37;
+  strokeHeight = displayWidth*2/37;
+  shapeWidth = displayWidth*1/37;
+  shapeHeight = displayWidth*2/37;
 }//End population

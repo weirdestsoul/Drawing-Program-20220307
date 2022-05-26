@@ -21,7 +21,7 @@ void draw() {
     GUISetup();
   }
 if (drawLine==true && mouseX>=drawingSurfaceX && mouseX<=drawingSurfaceX+drawingSurfaceWidth && mouseY>=drawingSurfaceY && mouseY<=drawingSurfaceY+drawingSurfaceHeight) {line( mouseX, mouseY, pmouseX, pmouseY );}
-if (drawLine==true && mouseX>=drawingSurfaceX && mouseX<=drawingSurfaceX+drawingSurfaceWidth && mouseY>=drawingSurfaceY && mouseY<=drawingSurfaceY+drawingSurfaceHeight) ellipse ( mouseX, mouseY, drawingDiameter, drawingDiameter ); //Circle drawing tool
+if (drawCircle==true && mouseX>=drawingSurfaceX && mouseX<=drawingSurfaceX+drawingSurfaceWidth && mouseY>=drawingSurfaceY && mouseY<=drawingSurfaceY+drawingSurfaceHeight) ellipse ( mouseX, mouseY, drawingDiameter, drawingDiameter ); //Circle drawing tool
 //
 GUIDraw();
 textDraw();
@@ -32,16 +32,7 @@ void keyPressed() {
 }//End keyPressed
 //
 void mousePressed() {
-//Paper-Button
-if(mouseX>=quitButtonX && mouseX<=quitButtonX + quitButtonWidth && mouseY>=quitButtonY && mouseY<=quitButtonY+quitButtonHeight) exit();
-  //
-  if (mouseX>=drawingSurfaceX && mouseX<=drawingSurfaceX+drawingSurfaceWidth && mouseY>=drawingSurfaceY && mouseY<=drawingSurfaceY+drawingSurfaceHeight) { 
-  if (drawLine == false) {
-    drawLine = true;
-  } else {
-    drawLine = false;}}//Button Paper (Drawing Surface)
-//
- if (mouseX>=secondTextX && mouseX<=secondTextX+secondTextWidth && mouseX>= secondTextY && mouseY<=secondTextY+secondTextHeight) paper=true;
+buttonFunctions();
 }//End mousePressed
 
 void mouseReleased(){
