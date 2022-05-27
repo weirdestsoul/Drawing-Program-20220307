@@ -1,22 +1,14 @@
 //Global Variables
 float fillButton, strokeWidth, strokeHeight, shapeWidth, shapeHeight;
 //
-void GUISetup() {
-  fill(white);
-  noStroke();
-  rect(drawingSurfaceX, drawingSurfaceY, drawingSurfaceWidth, drawingSurfaceHeight);
-  stroke(1); 
-  paper=false;
-  fill(reset);
-}//End GUISetup
-//
 void GUIDraw() {
 //Background
 fill(GUI);
-noStroke();
+strokeWeight(noStroke);
+stroke(GUI);
 rect(0, 0, displayWidth*6/35, displayHeight);
 rect(0, displayHeight*6/7, displayWidth, displayHeight*1/5);
-stroke(1);
+stroke(strokeReset);
 fill(resetColour);
 //
 //Quit Button
@@ -26,7 +18,7 @@ quitButtonColour = red;
 quitButtonColour = black;
 }//End Quit Button Hoverover
 fill(quitButtonColour);
-noStroke();
+strokeWeight(noStroke);
 rect(quitButtonX,quitButtonY, quitButtonWidth, quitButtonHeight);
 stroke(reset);
 fill(resetColour);
@@ -36,50 +28,86 @@ fill(white);
 rect(secondTextX, secondTextY, secondTextWidth, secondTextHeight);
 fill(black); //Ink
 //Draw colour buttons
+strokeWeight(noStroke);
 //row 1
+fill(red);
 rect(displayWidth*1/35, displayWidth*1/35, fillButton, fillButton);
+fill(rorange);
 rect(displayWidth*2/35, displayWidth*1/35, fillButton, fillButton);
+fill(orange);
 rect(displayWidth*3/35, displayWidth*1/35, fillButton, fillButton);
+fill(yorange);
 rect(displayWidth*4/35, displayWidth*1/35, fillButton, fillButton);
 //row 2
+fill(yellow);
 rect(displayWidth*1/35, displayWidth*2/35, fillButton, fillButton);
+fill(ygreen);
 rect(displayWidth*2/35, displayWidth*2/35, fillButton, fillButton);
+fill(green);
 rect(displayWidth*3/35, displayWidth*2/35, fillButton, fillButton);
+fill(bgreen);
 rect(displayWidth*4/35, displayWidth*2/35, fillButton, fillButton);
 //row 3
+fill(blue);
 rect(displayWidth*1/35, displayWidth*3/35, fillButton, fillButton);
+fill(bviolet);
 rect(displayWidth*2/35, displayWidth*3/35, fillButton, fillButton);
+fill(violet);
 rect(displayWidth*3/35, displayWidth*3/35, fillButton, fillButton);
+fill(rviolet);
 rect(displayWidth*4/35, displayWidth*3/35, fillButton, fillButton);
 //row 4
+fill(black);
 rect(displayWidth*1/35, displayWidth*4/35, fillButton, fillButton);
+fill(dgrey);
 rect(displayWidth*2/35, displayWidth*4/35, fillButton, fillButton);
+fill(lgrey);
 rect(displayWidth*3/35, displayWidth*4/35, fillButton, fillButton);
+fill(white);
 rect(displayWidth*4/35, displayWidth*4/35, fillButton, fillButton);
 //
+strokeWeight(strokeReset);
 //background fill buttons
+strokeWeight(noStroke);
 //row 1
+fill(red);
 rect(displayWidth*1/35, displayWidth*6/35, fillButton, fillButton);
+fill(rorange);
 rect(displayWidth*2/35, displayWidth*6/35, fillButton, fillButton);
+fill(orange);
 rect(displayWidth*3/35, displayWidth*6/35, fillButton, fillButton);
+fill(yorange);
 rect(displayWidth*4/35, displayWidth*6/35, fillButton, fillButton);
 //row 2
+fill(yellow);
 rect(displayWidth*1/35, displayWidth*7/35, fillButton, fillButton);
+fill(ygreen);
 rect(displayWidth*2/35, displayWidth*7/35, fillButton, fillButton);
+fill(green);
 rect(displayWidth*3/35, displayWidth*7/35, fillButton, fillButton);
+fill(bgreen);
 rect(displayWidth*4/35, displayWidth*7/35, fillButton, fillButton);
 //row 3
+fill(blue);
 rect(displayWidth*1/35, displayWidth*8/35, fillButton, fillButton);
+fill(bviolet);
 rect(displayWidth*2/35, displayWidth*8/35, fillButton, fillButton);
+fill(violet);
 rect(displayWidth*3/35, displayWidth*8/35, fillButton, fillButton);
+fill(rviolet);
 rect(displayWidth*4/35, displayWidth*8/35, fillButton, fillButton);
 //row 4
+fill(black);
 rect(displayWidth*1/35, displayWidth*9/35, fillButton, fillButton);
+fill(dgrey);
 rect(displayWidth*2/35, displayWidth*9/35, fillButton, fillButton);
+fill(lgrey);
 rect(displayWidth*3/35, displayWidth*9/35, fillButton, fillButton);
+fill(white);
 rect(displayWidth*4/35, displayWidth*9/35, fillButton, fillButton);
 //
 //Stroke buttons
+fill(black);
 rect(displayWidth*1/35, displayWidth*11/35, strokeWidth, strokeHeight);
 rect(displayWidth*2/35, displayWidth*11/35, strokeWidth, strokeHeight);
 rect(displayWidth*3/35, displayWidth*11/35, strokeWidth, strokeHeight);
@@ -90,4 +118,7 @@ rect(displayWidth*1/35, displayWidth*514/1295, strokeWidth, strokeHeight);
 rect(displayWidth*2/35, displayWidth*514/1295, strokeWidth, strokeHeight);
 rect(displayWidth*3/35, displayWidth*514/1295, strokeWidth, strokeHeight);
 rect(displayWidth*4/35, displayWidth*514/1295, strokeWidth, strokeHeight);
+//
+strokeWeight(strokeReset);
 }//End GUIDraw
+//

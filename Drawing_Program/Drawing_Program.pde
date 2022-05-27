@@ -5,7 +5,6 @@ float quitButtonX, quitButtonY, quitButtonWidth, quitButtonHeight;
 float drawingDiameter;
 float secondTextX, secondTextY, secondTextWidth, secondTextHeight;
 int reset = 1;
-color white = #FFFFFF, resetColour = white, red = #FF0303, black = 0, quitButtonColour, GUI = #969EA5;
 //
 void setup() {
   //Manditory: Mistaken display orientation should break app, feedback to console CANVAS
@@ -17,12 +16,10 @@ void setup() {
 }//End setup
 //
 void draw() {
-  if (paper==true) {
-    GUISetup();
-  }
-if (drawLine==true && mouseX>=drawingSurfaceX && mouseX<=drawingSurfaceX+drawingSurfaceWidth && mouseY>=drawingSurfaceY && mouseY<=drawingSurfaceY+drawingSurfaceHeight) {line( mouseX, mouseY, pmouseX, pmouseY );}
+if (paper==true) GUISetup();
+fill(black);
+if (drawLine==true && mouseX>=drawingSurfaceX && mouseX<=drawingSurfaceX+drawingSurfaceWidth && mouseY>=drawingSurfaceY && mouseY<=drawingSurfaceY+drawingSurfaceHeight) line( mouseX, mouseY, pmouseX, pmouseY );
 if (drawCircle==true && mouseX>=drawingSurfaceX && mouseX<=drawingSurfaceX+drawingSurfaceWidth && mouseY>=drawingSurfaceY && mouseY<=drawingSurfaceY+drawingSurfaceHeight) ellipse ( mouseX, mouseY, drawingDiameter, drawingDiameter ); //Circle drawing tool
-//
 GUIDraw();
 textDraw();
 }//End draw

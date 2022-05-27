@@ -3,7 +3,7 @@ PFont font;
 int initialFontSize = 55;
 int size;
 String quitButtonString = "QUIT";
-String secondTextString = "Waluigi!";
+String secondTextString = "Paper";
 //
 void textSetup() {
    font = createFont ("Comic Sans MS", initialFontSize);
@@ -21,7 +21,7 @@ fill(resetColour);
 //New paper Button
 fill(black);
 textAlign (CENTER, CENTER);
-size = 40; //Change until fit
+size = 20; //Change until fit
 textFont(font, size);
 text(secondTextString, secondTextX, secondTextY, secondTextWidth, secondTextHeight);
 fill(resetColour);
