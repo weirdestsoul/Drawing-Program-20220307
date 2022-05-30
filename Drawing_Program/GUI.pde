@@ -31,7 +31,10 @@ fill(black); //Ink
 strokeWeight(noStroke);
 //row 1
 fill(red);
+if(mouseX>=displayWidth*1/35 && mouseX<=displayWidth*1/35+fillButton && mouseY>= displayWidth*1/35 && mouseY<=displayWidth*1/35+fillButton) {strokeWeight(2);} else {
+  strokeWeight(0);}
 rect(displayWidth*1/35, displayWidth*1/35, fillButton, fillButton);
+strokeWeight(0);
 fill(rorange);
 rect(displayWidth*2/35, displayWidth*1/35, fillButton, fillButton);
 fill(orange);
@@ -120,5 +123,7 @@ rect(displayWidth*3/35, displayWidth*514/1295, strokeWidth, strokeHeight);
 rect(displayWidth*4/35, displayWidth*514/1295, strokeWidth, strokeHeight);
 //
 strokeWeight(strokeReset);
+//
+if (paper==true) GUISetup();
 }//End GUIDraw
 //

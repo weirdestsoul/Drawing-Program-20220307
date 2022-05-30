@@ -16,20 +16,18 @@ void setup() {
 }//End setup
 //
 void draw() {
-if (paper==true) GUISetup();
 drawingTools();
 GUIDraw();
 textDraw();
 }//End draw
 //
 void keyPressed() {
-  
 }//End keyPressed
 //
 void mousePressed() {
 buttonFunctions();
 }//End mousePressed
-
+//
 void mouseReleased(){
 drawTool=false;
 }
