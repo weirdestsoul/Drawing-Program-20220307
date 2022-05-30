@@ -63,7 +63,7 @@ fill(dgrey);
 rect(displayWidth*2/35, displayWidth*4/35, fillButton, fillButton);
 fill(white);
 rect(displayWidth*3/35, displayWidth*4/35, fillButton, fillButton);
-fill(white);
+fill(backgroundColour);
 rect(displayWidth*4/35, displayWidth*4/35, fillButton, fillButton);
 //
 strokeWeight(strokeReset);
@@ -103,7 +103,7 @@ fill(dgrey);
 rect(displayWidth*2/35, displayWidth*9/35, fillButton, fillButton);
 fill(white);
 rect(displayWidth*3/35, displayWidth*9/35, fillButton, fillButton);
-fill(white);
+fill(backgroundColour);
 rect(displayWidth*4/35, displayWidth*9/35, fillButton, fillButton);
 //
 //Stroke buttons

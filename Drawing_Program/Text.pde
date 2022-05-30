@@ -6,12 +6,12 @@ String quitButtonString = "QUIT";
 String secondTextString = "Paper";
 //
 void textSetup() {
-   font = createFont ("Comic Sans MS", initialFontSize);
+   font = createFont ("Leelawadee UI Semilight", initialFontSize);
 }//End textSetup
 //
 void textDraw() {
 //Text, Quit Button
-fill(black);
+fill(white);
 textAlign (CENTER, CENTER);
 size = 40; //Change until fit
 textFont(font, size);
@@ -19,7 +19,11 @@ text(quitButtonString, quitButtonX, quitButtonY, quitButtonWidth, quitButtonHeig
 fill(resetColour);
 //
 //New paper Button
+if(backgroundColour==black){
+fill(white); 
+} else { 
 fill(black);
+}
 textAlign (CENTER, CENTER);
 size = 20; //Change until fit
 textFont(font, size);

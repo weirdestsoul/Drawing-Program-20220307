@@ -1,8 +1,8 @@
 //Global Variables
 //
 void GUISetup() {
-  fill(white);
-  stroke(white);
+  fill(backgroundColour);
+  stroke(backgroundColour);
   noStroke();
   rect(drawingSurfaceX, drawingSurfaceY, drawingSurfaceWidth, drawingSurfaceHeight);
   stroke(1); 

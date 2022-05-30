@@ -1,5 +1,5 @@
 //Global Variables
-Boolean drawLine = false, drawCircle = false, paper=false;
+Boolean drawTool=false, drawLine = false, drawCircle = false, paper=false, eraser=false;
 float drawingSurfaceX, drawingSurfaceY, drawingSurfaceWidth, drawingSurfaceHeight;
 float quitButtonX, quitButtonY, quitButtonWidth, quitButtonHeight;
 float drawingDiameter;
@@ -17,9 +17,7 @@ void setup() {
 //
 void draw() {
 if (paper==true) GUISetup();
-fill(black);
-if (drawLine==true && mouseX>=drawingSurfaceX && mouseX<=drawingSurfaceX+drawingSurfaceWidth && mouseY>=drawingSurfaceY && mouseY<=drawingSurfaceY+drawingSurfaceHeight) line( mouseX, mouseY, pmouseX, pmouseY );
-if (drawCircle==true && mouseX>=drawingSurfaceX && mouseX<=drawingSurfaceX+drawingSurfaceWidth && mouseY>=drawingSurfaceY && mouseY<=drawingSurfaceY+drawingSurfaceHeight) ellipse ( mouseX, mouseY, drawingDiameter, drawingDiameter ); //Circle drawing tool
+drawingTools();
 GUIDraw();
 textDraw();
 }//End draw
@@ -33,7 +31,6 @@ buttonFunctions();
 }//End mousePressed
 
 void mouseReleased(){
-drawLine=false; 
-drawCircle=false;
+drawTool=false;
 }
 //End MAIN
