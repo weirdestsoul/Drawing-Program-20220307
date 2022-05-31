@@ -8,5 +8,6 @@ void GUISetup() {
   stroke(1); 
   paper=false;
   fill(reset);
+  stroke(reset);
 }//End GUISetup
 //

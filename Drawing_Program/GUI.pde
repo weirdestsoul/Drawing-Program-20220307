@@ -123,7 +123,5 @@ rect(displayWidth*3/35, displayWidth*514/1295, strokeWidth, strokeHeight);
 rect(displayWidth*4/35, displayWidth*514/1295, strokeWidth, strokeHeight);
 //
 strokeWeight(strokeReset);
-//
-if (paper==true) GUISetup();
 }//End GUIDraw
 //
