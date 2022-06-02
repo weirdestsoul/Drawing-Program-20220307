@@ -1,5 +1,10 @@
 //Global Variables
-int strokeReset = 2, noStroke = 0;
+Boolean drawTool=false, drawLine = false, drawCircle = false, drawTriange=false, drawRectange=false, paper=false, eraser=false, drawS1=false, drawS2=false, drawS3=false, drawS4=false;
+float drawingSurfaceX, drawingSurfaceY, drawingSurfaceWidth, drawingSurfaceHeight;
+float quitButtonX, quitButtonY, quitButtonWidth, quitButtonHeight;
+float drawingDiameter;
+float secondTextX, secondTextY, secondTextWidth, secondTextHeight;
+int strokeReset = 2, noStroke = 0, reset = 1, lineStroke=2;
 color backgroundColour, toolColour, white = #FFFFFF, lgrey=#8B8B83, dgrey=#585858, resetColour = white, black = 0, quitButtonColour, GUI = #969EA5, blue=#0000FF, red=#FF0000, yellow=#FFE600, green=#2A8917, ygreen=#36FF00, bgreen=#4DAD94, bviolet=#5112C9, violet=#8B12C9, rviolet=#E012BB, rorange=#E03B12, orange=#E07D12, yorange=#E0AA12;
 //
 void population() {

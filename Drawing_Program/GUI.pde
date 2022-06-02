@@ -169,11 +169,6 @@ rect(displayWidth*4/35, displayWidth*514/1295, strokeWidth, strokeHeight);
   fill(white);
   rect(displayWidth*4/35, displayWidth*514/1295, strokeWidth, strokeHeight);
 }
-
-
-
-
-
 //
 strokeWeight(strokeReset);
 //
