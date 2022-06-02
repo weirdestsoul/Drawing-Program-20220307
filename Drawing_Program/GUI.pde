@@ -157,7 +157,8 @@ rect(displayWidth*2/35, displayWidth*514/1295, strokeWidth, strokeHeight);
   rect(displayWidth*2/35, displayWidth*514/1295, strokeWidth, strokeHeight);
 }
 if (mouseX>=displayWidth*3/35 && mouseX<=displayWidth*3/35+strokeWidth && mouseY>=displayWidth*514/1295 && mouseY<=displayWidth*514/1295+strokeHeight){ 
-fill(yellow);
+  fill(yellow);
+  rect(displayWidth*3/35, displayWidth*514/1295, strokeWidth, strokeHeight);
 } else {
   fill(white);
   rect(displayWidth*3/35, displayWidth*514/1295, strokeWidth, strokeHeight);

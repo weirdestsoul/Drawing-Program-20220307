@@ -14,6 +14,7 @@ void draw() {
 drawingTools();
 GUIDraw();
 textDraw();
+println(lineStroke);
 }//End draw
 //
 void keyPressed() {

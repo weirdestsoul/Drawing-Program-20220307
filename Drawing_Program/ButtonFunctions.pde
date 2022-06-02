@@ -178,18 +178,30 @@ if (mouseX>=drawingSurfaceX && mouseX<=drawingSurfaceX+drawingSurfaceWidth && mo
   } else {
     drawTool = false;}}//Button Paper (Drawing Surface)
     //Stroke Buttons
-if (mouseX>=displayWidth*1/35 && mouseX<=displayWidth*1/35+strokeWidth && mouseY>=displayWidth*11/35 && mouseY<=displayWidth*11/35+strokeHeight); lineStroke=2;
+if (mouseX>=displayWidth*1/35 && mouseX<=displayWidth*1/35+strokeWidth && mouseY>=displayWidth*11/35 && mouseY<=displayWidth*11/35+strokeHeight)lineStroke=2;
 //
-if (mouseX>=displayWidth*2/35 && mouseX<=displayWidth*1/35+strokeWidth && mouseY>=displayWidth*11/35 && mouseY<=displayWidth*11/35+strokeHeight);lineStroke=4;
+if (mouseX>=displayWidth*2/35 && mouseX<=displayWidth*2/35+strokeWidth && mouseY>=displayWidth*11/35 && mouseY<=displayWidth*11/35+strokeHeight)lineStroke=6;
 //
-if (mouseX>=displayWidth*3/35 && mouseX<=displayWidth*1/35+strokeWidth && mouseY>=displayWidth*11/35 && mouseY<=displayWidth*11/35+strokeHeight);lineStroke=6;
+if (mouseX>=displayWidth*3/35 && mouseX<=displayWidth*3/35+strokeWidth && mouseY>=displayWidth*11/35 && mouseY<=displayWidth*11/35+strokeHeight)lineStroke=10;
 //
-if (mouseX>=displayWidth*4/35 && mouseX<=displayWidth*1/35+strokeWidth && mouseY>=displayWidth*11/35 && mouseY<=displayWidth*11/35+strokeHeight);lineStroke=8;
+if (mouseX>=displayWidth*4/35 && mouseX<=displayWidth*4/35+strokeWidth && mouseY>=displayWidth*11/35 && mouseY<=displayWidth*11/35+strokeHeight)lineStroke=14;
 //Shape Buttons
-if (mouseX>=displayWidth*1/35 && mouseX<=displayWidth*1/35+strokeWidth && mouseY>=displayWidth*514/1295 && mouseY<=displayWidth*514/1295+strokeHeight);
-if (mouseX>=displayWidth*2/35 && mouseX<=displayWidth*1/35+strokeWidth && mouseY>=displayWidth*514/1295 && mouseY<=displayWidth*514/1295+strokeHeight);
-if (mouseX>=displayWidth*3/35 && mouseX<=displayWidth*1/35+strokeWidth && mouseY>=displayWidth*514/1295 && mouseY<=displayWidth*514/1295+strokeHeight);
-if (mouseX>=displayWidth*4/35 && mouseX<=displayWidth*1/35+strokeWidth && mouseY>=displayWidth*514/1295 && mouseY<=displayWidth*514/1295+strokeHeight);
+if (mouseX>=displayWidth*1/35 && mouseX<=displayWidth*1/35+strokeWidth+strokeWidth && mouseY>=displayWidth*514/1295 && mouseY<=displayWidth*514/1295+strokeHeight){
+  drawLine=true;
+  drawCircle=false;
+}
+if (mouseX>=displayWidth*2/35 && mouseX<=displayWidth*2/35+strokeWidth+strokeWidth && mouseY>=displayWidth*514/1295 && mouseY<=displayWidth*514/1295+strokeHeight){
+  drawLine=false;
+  drawCircle=true;
+}
+if (mouseX>=displayWidth*3/35 && mouseX<=displayWidth*3/35+strokeWidth+strokeWidth && mouseY>=displayWidth*514/1295 && mouseY<=displayWidth*514/1295+strokeHeight){
+  drawLine=false;
+  drawCircle=false;
+}
+if (mouseX>=displayWidth*4/35 && mouseX<=displayWidth*4/35+strokeWidth+strokeWidth && mouseY>=displayWidth*514/1295 && mouseY<=displayWidth*514/1295+strokeHeight){
+  drawLine=false;
+  drawCircle=false;
+}
 //
 
 }//End buttonFunctions
