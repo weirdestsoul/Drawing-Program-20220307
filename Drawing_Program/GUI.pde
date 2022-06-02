@@ -110,7 +110,7 @@ fill(backgroundColour);
 rect(displayWidth*4/35, displayWidth*9/35, fillButton, fillButton);
 //
 //Stroke buttons
-fill(black);
+fill(white);
 rect(displayWidth*1/35, displayWidth*11/35, strokeWidth, strokeHeight);
 rect(displayWidth*2/35, displayWidth*11/35, strokeWidth, strokeHeight);
 rect(displayWidth*3/35, displayWidth*11/35, strokeWidth, strokeHeight);

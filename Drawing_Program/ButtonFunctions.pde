@@ -170,8 +170,15 @@ if (mouseX>=displayWidth*4/35 && mouseX<=displayWidth*4/35+fillButton && mouseY>
 }
 //
 if(eraser==true)toolColour=backgroundColour;
-//Line draw
+//
+//Stroke Buttons
+if (mouseX>=displayWidth*1/35 && mouseX<=displayWidth*1/35*4/35+strokeWidth && mouseY>=displayWidth*11/35 && mouseY<=displayWidth*11/35+strokeHeight);
+if (mouseX>=displayWidth*1/35 && mouseX<=displayWidth*1/35*4/35+strokeWidth && mouseY>=displayWidth*11/35 && mouseY<=displayWidth*11/35+strokeHeight);
+if (mouseX>=displayWidth*1/35 && mouseX<=displayWidth*1/35*4/35+strokeWidth && mouseY>=displayWidth*11/35 && mouseY<=displayWidth*11/35+strokeHeight);
+if (mouseX>=displayWidth*1/35 && mouseX<=displayWidth*1/35*4/35+strokeWidth && mouseY>=displayWidth*11/35 && mouseY<=displayWidth*11/35+strokeHeight);
+if (mouseX>=displayWidth*1/35 && mouseX<=displayWidth*1/35*4/35+strokeWidth && mouseY>=displayWidth*11/35 && mouseY<=displayWidth*11/35+strokeHeight);
 
+//Line draw
 if (mouseX>=drawingSurfaceX && mouseX<=drawingSurfaceX+drawingSurfaceWidth && mouseY>=drawingSurfaceY && mouseY<=drawingSurfaceY+drawingSurfaceHeight) { 
   if (drawTool == false) {
     drawTool = true;
