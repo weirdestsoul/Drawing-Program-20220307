@@ -193,14 +193,20 @@ if (mouseX>=displayWidth*1/35 && mouseX<=displayWidth*1/35+strokeWidth+strokeWid
 if (mouseX>=displayWidth*2/35 && mouseX<=displayWidth*2/35+strokeWidth+strokeWidth && mouseY>=displayWidth*514/1295 && mouseY<=displayWidth*514/1295+strokeHeight){
   drawLine=false;
   drawCircle=true;
+  drawTriangle=false;
+  drawRectangle=false;
 }
 if (mouseX>=displayWidth*3/35 && mouseX<=displayWidth*3/35+strokeWidth+strokeWidth && mouseY>=displayWidth*514/1295 && mouseY<=displayWidth*514/1295+strokeHeight){
   drawLine=false;
   drawCircle=false;
+  drawTriangle=true;
+  drawRectangle=false;
 }
 if (mouseX>=displayWidth*4/35 && mouseX<=displayWidth*4/35+strokeWidth+strokeWidth && mouseY>=displayWidth*514/1295 && mouseY<=displayWidth*514/1295+strokeHeight){
   drawLine=false;
   drawCircle=false;
+  drawTriangle=false;
+  drawRectangle=true;
 }
 //
 
