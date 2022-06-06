@@ -54,7 +54,6 @@ strokeWeight(0);
 if(mouseX>=displayWidth*1/35 && mouseX<=displayWidth*1/35+fillButton && mouseY>= displayWidth*2/35 && mouseY<=displayWidth*2/35+fillButton) {strokeWeight(2);} else {
   strokeWeight(0);}
 fill(yellow);
-strokeWeight(0);
 rect(displayWidth*1/35, displayWidth*2/35, fillButton, fillButton);
 strokeWeight(0);
 if(mouseX>=displayWidth*2/35 && mouseX<=displayWidth*2/35+fillButton && mouseY>= displayWidth*2/35 && mouseY<=displayWidth*2/35+fillButton) {strokeWeight(2);} else {
