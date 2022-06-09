@@ -1,23 +1,25 @@
-//Global Variables
 
+//Global Variables
 //
 void setup() {
   //Manditory: Mistaken display orientation should break app, feedback to console CANVAS
   frameRate(144);
   fullScreen(); //displayWidth, displayHeight
   population();
+  musicSetup();
   textSetup();
   GUISetup();
 }//End setup
 //
 void draw() {
-drawingTools();
-GUIDraw();
-textDraw();
-println(lineStroke);
+  musicDraw();
+  drawingTools();
+  GUIDraw();
+  textDraw();
 }//End draw
 //
 void keyPressed() {
+  musicKeyPressed();
 }//End keyPressed
 //
 void mousePressed() {
