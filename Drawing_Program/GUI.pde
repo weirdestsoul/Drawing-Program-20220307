@@ -288,5 +288,7 @@ if (paper==true) GUISetup();
 rect(displayWidth*16/35, displayHeight*13/14, progressBarWidth, progressBarHeight);
 fill(black);
 rect(displayWidth*16/35, displayHeight*13/14,(float(song[currentSong].position())/float(song[currentSong].length()))*progressBarWidth, progressBarHeight);
+fill(white);
+ellipse(displayWidth*16/35+(float(song[currentSong].position())/float(song[currentSong].length()))*progressBarWidth, displayHeight*13/14+displayHeight*1/400, displayHeight*1/125,displayHeight*1/125);
 }//End GUIDraw
 //

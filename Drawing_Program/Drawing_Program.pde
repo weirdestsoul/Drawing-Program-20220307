@@ -18,6 +18,7 @@ void draw() {
   GUIDraw();
   textDraw();
 println(newTime);
+println(trueNumberOfSongs);
 }//End draw
 //
 void keyPressed() {

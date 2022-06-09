@@ -1,6 +1,9 @@
 //Global Variables
 //
 void buttonFunctions() {
+//Progress Bar Function
+if (mouseX>=displayWidth*16/35 && mouseX<=displayWidth*16/35+progressBarWidth && mouseY>=displayHeight*13/14 && mouseY<=displayHeight*13/14+progressBarHeight) song[currentSong].play(newTime);
+
 //Exit
 if(mouseX>=quitButtonX && mouseX<=quitButtonX + quitButtonWidth && mouseY>=quitButtonY && mouseY<=quitButtonY+quitButtonHeight) exit();
 //
@@ -85,7 +88,6 @@ if (mouseX>=displayWidth*3/35 && mouseX<=displayWidth*3/35+fillButton && mouseY>
 //
 if (mouseX>=displayWidth*4/35 && mouseX<=displayWidth*4/35+fillButton && mouseY>= displayWidth*9/35 && mouseY<=displayWidth*9/35+fillButton) {
   GUISetup();
-  eraser=true;
 }
 //
 
@@ -211,9 +213,4 @@ if (mouseX>=displayWidth*4/35 && mouseX<=displayWidth*4/35+strokeWidth && mouseY
   drawRectangle=true;
 }
 //
-//Progress Bar Function
-if (mouseX>=displayWidth*16/35 && mouseX<=displayWidth*16/35+displayWidth*9/35 && mouseY>=displayWidth*13/35 && mouseY<=displayWidth*13/35+displayHeight*1/100){ 
-song[currentSong].play(newTime);
-song[currentSong].rewind();
-}
 }//End buttonFunctions

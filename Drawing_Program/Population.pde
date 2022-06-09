@@ -31,7 +31,7 @@ void population() {
   backgroundColour=white;
   toolColour=black;
   lineStroke=2;
-  progressBarHeight=displayHeight*1/100;
+  progressBarHeight=displayHeight*1/200;
   progressBarWidth=displayWidth*9/35;
 }//End population
 

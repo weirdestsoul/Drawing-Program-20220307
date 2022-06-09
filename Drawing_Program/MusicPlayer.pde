@@ -7,7 +7,8 @@ import ddf.minim.ugens.*;
 //Global Variables
 Minim minim; 
 Boolean pauseTrue=false, stopTrue = false;
-int numberOfSongs=4;
+int numberOfSongs=5;
+int trueNumberOfSongs=numberOfSongs-1;
 AudioPlayer[] song = new AudioPlayer[numberOfSongs];
 AudioMetaData[] songMetaData = new AudioMetaData[numberOfSongs]; 
 int currentSong = numberOfSongs - numberOfSongs;
@@ -17,6 +18,7 @@ void musicSetup () {
   song[currentSong+=1] = minim.loadFile("musicFolder/Without Me.mp3");
   song[currentSong+=1] = minim.loadFile("musicFolder/Jetpack Joyride Theme.mp3");
   song[currentSong+=1] = minim.loadFile("musicFolder/[Electro] - Laszlo - Supernova [Monstercat Release].mp3");
+  song[currentSong+=1] = minim.loadFile("musicFolder/Megalovania BASS BOOSTED.mp3");
   //
   currentSong-=currentSong; 
   for (int i=currentSong; i<song.length; i++) {
@@ -28,12 +30,12 @@ void musicDraw () {
   if (song[currentSong].isPlaying() && !song[currentSong].isLooping()) println("Play Once");
   if (song[currentSong].isPlaying()) println("Time elapsed", song[currentSong].position()/1000, "Song Length", song[currentSong].length()/1000 ); //value in milliseconds
   if (!song[currentSong].isPlaying()) {
-  if(!song[currentSong].isPlaying() && currentSong <=2 && pauseTrue == false && stopTrue == false) {
+  if(!song[currentSong].isPlaying() && currentSong <=trueNumberOfSongs && pauseTrue == false && stopTrue == false) {
   song[currentSong].pause();
   song[currentSong].rewind();
   currentSong+=1;
   song[currentSong].play();
-  } else if (currentSong == 3 && !song[currentSong].isPlaying() && pauseTrue==false && stopTrue == false) {
+  } else if (currentSong == trueNumberOfSongs && !song[currentSong].isPlaying() && pauseTrue==false && stopTrue == false) {
   song[currentSong].pause();
   song[currentSong].rewind();
   currentSong -= currentSong;
@@ -95,17 +97,17 @@ void musicKeyPressed () {
   }//End stop button
   //
   if (key=='n'|| key=='N') {
-  if(song[currentSong].isPlaying() && currentSong <=2) {
+  if(song[currentSong].isPlaying() && currentSong < trueNumberOfSongs) {
   song[currentSong].pause();
   song[currentSong].rewind();
   currentSong++;
   song[currentSong].play();
-  } else if (currentSong >= 3 && song[currentSong].isPlaying()) {
+  } else if (currentSong == trueNumberOfSongs && song[currentSong].isPlaying()) {
   song[currentSong].pause();
   song[currentSong].rewind();
   currentSong -= currentSong;
   song[currentSong].play();
-  } else if (currentSong >= 3 && !song[currentSong].isPlaying()) {
+  } else if (currentSong == trueNumberOfSongs && !song[currentSong].isPlaying()) {
   song[currentSong].pause();
   song[currentSong].rewind();
   currentSong -= currentSong;
@@ -122,12 +124,12 @@ void musicKeyPressed () {
   song[currentSong].rewind();
   currentSong-=1;
   song[currentSong].play();
-  } else if (currentSong <= 0 && song[currentSong].isPlaying()) {
+  } else if (currentSong == 0 && song[currentSong].isPlaying()) {
   song[currentSong].pause();
   song[currentSong].rewind();
   currentSong+=numberOfSongs-1;
   song[currentSong].play();
-  } else if (currentSong <= 0 && !song[currentSong].isPlaying()) {
+  } else if (currentSong == 0 && !song[currentSong].isPlaying()) {
   song[currentSong].pause();
   song[currentSong].rewind();
   currentSong+=numberOfSongs-1;
