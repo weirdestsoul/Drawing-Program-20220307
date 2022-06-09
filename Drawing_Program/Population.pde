@@ -4,7 +4,9 @@ float drawingSurfaceX, drawingSurfaceY, drawingSurfaceWidth, drawingSurfaceHeigh
 float quitButtonX, quitButtonY, quitButtonWidth, quitButtonHeight;
 float drawingDiameter;
 float secondTextX, secondTextY, secondTextWidth, secondTextHeight;
+float progressBarHeight, progressBarWidth, setTime;
 int strokeReset = 2, noStroke = 0, reset = 1, lineStroke;
+int newTime;
 color backgroundColour, toolColour, white = #FFFFFF, lgrey=#8B8B83, dgrey=#585858, resetColour = white, black = 0, quitButtonColour, GUI = #969EA5, blue=#0000FF, red=#FF0000, yellow=#FFE600, green=#2A8917, ygreen=#36FF00, bgreen=#4DAD94, bviolet=#5112C9, violet=#8B12C9, rviolet=#E012BB, rorange=#E03B12, orange=#E07D12, yorange=#E0AA12;
 //
 void population() {
@@ -29,5 +31,11 @@ void population() {
   backgroundColour=white;
   toolColour=black;
   lineStroke=2;
-
+  progressBarHeight=displayHeight*1/100;
+  progressBarWidth=displayWidth*9/35;
 }//End population
+
+void populationDraw() {
+  setTime =  float(mouseX-displayWidth*16/35) / float(displayWidth*9/35);
+  newTime = int(setTime*song[currentSong].length());
+}//End populationDraw

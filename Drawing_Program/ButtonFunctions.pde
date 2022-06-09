@@ -186,30 +186,34 @@ if (mouseX>=displayWidth*3/35 && mouseX<=displayWidth*3/35+strokeWidth && mouseY
 //
 if (mouseX>=displayWidth*4/35 && mouseX<=displayWidth*4/35+strokeWidth && mouseY>=displayWidth*11/35 && mouseY<=displayWidth*11/35+strokeHeight)lineStroke=14;
 //Shape Buttons
-if (mouseX>=displayWidth*1/35 && mouseX<=displayWidth*1/35+strokeWidth+strokeWidth && mouseY>=displayWidth*514/1295 && mouseY<=displayWidth*514/1295+strokeHeight){
+if (mouseX>=displayWidth*1/35 && mouseX<=displayWidth*1/35+strokeWidth && mouseY>=displayWidth*514/1295 && mouseY<=displayWidth*514/1295+strokeHeight){
   drawLine=true;
   drawCircle=false;
   drawTriangle=false;
   drawRectangle=false;
 }
-if (mouseX>=displayWidth*2/35 && mouseX<=displayWidth*2/35+strokeWidth+strokeWidth && mouseY>=displayWidth*514/1295 && mouseY<=displayWidth*514/1295+strokeHeight){
+if (mouseX>=displayWidth*2/35 && mouseX<=displayWidth*2/35+strokeWidth && mouseY>=displayWidth*514/1295 && mouseY<=displayWidth*514/1295+strokeHeight){
   drawLine=false;
   drawCircle=true;
   drawTriangle=false;
   drawRectangle=false;
 }
-if (mouseX>=displayWidth*3/35 && mouseX<=displayWidth*3/35+strokeWidth+strokeWidth && mouseY>=displayWidth*514/1295 && mouseY<=displayWidth*514/1295+strokeHeight){
+if (mouseX>=displayWidth*3/35 && mouseX<=displayWidth*3/35+strokeWidth && mouseY>=displayWidth*514/1295 && mouseY<=displayWidth*514/1295+strokeHeight){
   drawLine=false;
   drawCircle=false;
   drawTriangle=true;
   drawRectangle=false;
 }
-if (mouseX>=displayWidth*4/35 && mouseX<=displayWidth*4/35+strokeWidth+strokeWidth && mouseY>=displayWidth*514/1295 && mouseY<=displayWidth*514/1295+strokeHeight){
+if (mouseX>=displayWidth*4/35 && mouseX<=displayWidth*4/35+strokeWidth && mouseY>=displayWidth*514/1295 && mouseY<=displayWidth*514/1295+strokeHeight){
   drawLine=false;
   drawCircle=false;
   drawTriangle=false;
   drawRectangle=true;
 }
 //
-
+//Progress Bar Function
+if (mouseX>=displayWidth*16/35 && mouseX<=displayWidth*16/35+displayWidth*9/35 && mouseY>=displayWidth*13/35 && mouseY<=displayWidth*13/35+displayHeight*1/100){ 
+song[currentSong].play(newTime);
+song[currentSong].rewind();
+}
 }//End buttonFunctions

@@ -12,11 +12,12 @@ void setup() {
 }//End setup
 //
 void draw() {
+  populationDraw();
   musicDraw();
   drawingTools();
   GUIDraw();
   textDraw();
-
+println(newTime);
 }//End draw
 //
 void keyPressed() {

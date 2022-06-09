@@ -280,12 +280,13 @@ if (mouseX>=displayWidth*4/35 && mouseX<=displayWidth*4/35+strokeWidth && mouseY
 }
 //
 strokeWeight(strokeReset);
+fill(white);
 //
 if (paper==true) GUISetup();
 //
 //Music Progress Bar
-rect(displayWidth*15/35, displayHeight*13/14, displayWidth*9/35, displayHeight*1/100);
+rect(displayWidth*16/35, displayHeight*13/14, progressBarWidth, progressBarHeight);
 fill(black);
-rect(displayWidth*15/35, displayHeight*13/14,(float(song[currentSong].position())/float(song[currentSong].length()))*displayWidth*9/35, displayHeight*1/100);
+rect(displayWidth*16/35, displayHeight*13/14,(float(song[currentSong].position())/float(song[currentSong].length()))*progressBarWidth, progressBarHeight);
 }//End GUIDraw
 //
