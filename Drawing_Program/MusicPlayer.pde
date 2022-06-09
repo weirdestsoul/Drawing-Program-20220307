@@ -21,10 +21,6 @@ void musicSetup () {
   currentSong-=currentSong; 
   for (int i=currentSong; i<song.length; i++) {
   }
-  //
-  println("Start of Console");
-  println("Click the console to Finish Starting this program");
-  println("Title:", songMetaData[currentSong].title() );
 }//End musicSetup
 //
 void musicDraw () {
@@ -144,3 +140,8 @@ void musicKeyPressed () {
   }
   
 }//End musicKeyPressed
+//
+void musicMousePressed () {
+  
+  
+}//End musicMousePressed

@@ -16,6 +16,7 @@ void draw() {
   drawingTools();
   GUIDraw();
   textDraw();
+
 }//End draw
 //
 void keyPressed() {
@@ -23,6 +24,7 @@ void keyPressed() {
 }//End keyPressed
 //
 void mousePressed() {
+musicMousePressed();
 buttonFunctions();
 }//End mousePressed
 //
