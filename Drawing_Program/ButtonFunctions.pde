@@ -213,4 +213,7 @@ if (mouseX>=displayWidth*4/35 && mouseX<=displayWidth*4/35+strokeWidth && mouseY
   drawRectangle=true;
 }
 //
+//Music Player Buttons
+   if(mouseX>=displayWidth*30/35 && mouseX<=displayWidth*34/35 && mouseY>=displayHeight*27/28 && mouseY<=displayHeight*27/28+progressBarHeight) volumeHeld=true;
+   
 }//End buttonFunctions

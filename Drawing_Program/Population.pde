@@ -1,15 +1,16 @@
 //Global Variables
-Boolean drawTool=false, drawLine = true, eraser=false, paper=false, drawCircle = false, drawTriangle=false, drawRectangle=false;
+Boolean drawTool=false, drawLine = true, eraser=false, paper=false, drawCircle = false, drawTriangle=false, drawRectangle=false, volumeHeld=false;
 float drawingSurfaceX, drawingSurfaceY, drawingSurfaceWidth, drawingSurfaceHeight;
 float quitButtonX, quitButtonY, quitButtonWidth, quitButtonHeight;
 float drawingDiameter;
 float secondTextX, secondTextY, secondTextWidth, secondTextHeight;
-float progressBarHeight, progressBarWidth, setTime;
+float progressBarHeight, progressBarWidth, setTime, volume, volumeButton;
 int strokeReset = 2, noStroke = 0, reset = 1, lineStroke;
 int newTime;
 color backgroundColour, toolColour, white = #FFFFFF, lgrey=#8B8B83, dgrey=#585858, resetColour = white, black = 0, quitButtonColour, GUI = #969EA5, blue=#0000FF, red=#FF0000, yellow=#FFE600, green=#2A8917, ygreen=#36FF00, bgreen=#4DAD94, bviolet=#5112C9, violet=#8B12C9, rviolet=#E012BB, rorange=#E03B12, orange=#E07D12, yorange=#E0AA12;
 //
 void population() {
+  volumeButton=0.5;
   drawingSurfaceX = displayWidth*6/35;
   drawingSurfaceY = displayHeight*0;
   drawingSurfaceWidth = displayWidth*29/35;
@@ -38,4 +39,10 @@ void population() {
 void populationDraw() {
   setTime =  float(mouseX-displayWidth*16/35) / float(displayWidth*9/35);
   newTime = int(setTime*song[currentSong].length());
+  volume = float(mouseX-displayWidth*33/35)/35;
+  if(volumeHeld==true){
+    volumeButton = float(mouseX-displayWidth*30/35) / float(displayWidth*4/35); 
+    song[currentSong].setGain(volume);
+  }
+  
 }//End populationDraw

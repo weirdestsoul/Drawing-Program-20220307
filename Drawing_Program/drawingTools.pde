@@ -6,9 +6,7 @@ void drawingTools() {
   fill(toolColour);
 if(drawLine==true){ 
   if (drawTool==true && mouseX>=drawingSurfaceX && mouseX<=drawingSurfaceX+drawingSurfaceWidth && mouseY>=drawingSurfaceY && mouseY<=drawingSurfaceY+drawingSurfaceHeight)
- 
  line( mouseX, mouseY, pmouseX, pmouseY );
-  
 }
 //
 if(drawCircle==true){

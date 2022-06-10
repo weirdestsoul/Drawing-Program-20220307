@@ -285,16 +285,24 @@ fill(white);
 if (paper==true) GUISetup();
 //
 //Music Progress Bar
-rect(displayWidth*16/35, displayHeight*13/14, progressBarWidth, progressBarHeight);
+rect(displayWidth*16/35, displayHeight*27/28, progressBarWidth, progressBarHeight);
 fill(black);
-rect(displayWidth*16/35, displayHeight*13/14,(float(song[currentSong].position())/float(song[currentSong].length()))*progressBarWidth, progressBarHeight);
+rect(displayWidth*16/35, displayHeight*27/28,(float(song[currentSong].position())/float(song[currentSong].length()))*progressBarWidth, progressBarHeight);
 fill(white);
-ellipse(displayWidth*16/35+(float(song[currentSong].position())/float(song[currentSong].length()))*progressBarWidth, displayHeight*13/14+displayHeight*1/400, displayHeight*1/125,displayHeight*1/125);
+ellipse(displayWidth*16/35+(float(song[currentSong].position())/float(song[currentSong].length()))*progressBarWidth, displayHeight*27/28+displayHeight*1/400, displayHeight*1/125,displayHeight*1/125);
+//
+//Volume Slider
+rect(displayWidth*30/35, displayHeight*27/28, displayWidth*4/35, progressBarHeight);
+fill(black);
+if(volumeButton<=1 && volumeButton>=0)rect(displayWidth*30/35, displayHeight*27/28, (volumeButton*displayWidth*4/35), progressBarHeight);
+if(volumeButton>=1 )rect(displayWidth*30/35, displayHeight*27/28, (displayWidth*4/35), progressBarHeight);
+fill(white);
 //
 //Music Buttons
-rect(displayWidth*14/35, displayHeight*51/56, fillButton, fillButton);
-rect(displayWidth*25/70, displayHeight*51/56, fillButton, fillButton);
-rect(displayWidth*26/35, displayHeight*51/56, fillButton, fillButton);
-rect(displayWidth*55/70, displayHeight*51/56, fillButton, fillButton);
+rect(displayWidth*17/35, displayHeight*50/56, fillButton, fillButton);
+rect(displayWidth*37/70, displayHeight*50/56, fillButton, fillButton);
+rect(displayWidth*23/35, displayHeight*50/56, fillButton, fillButton);
+rect(displayWidth*43/70, displayHeight*50/56, fillButton, fillButton);
+rect(displayWidth*20/35, displayHeight*50/56, fillButton, fillButton);
 }//End GUIDraw
 //

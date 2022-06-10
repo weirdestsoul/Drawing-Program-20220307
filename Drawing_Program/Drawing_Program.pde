@@ -17,6 +17,7 @@ void draw() {
   drawingTools();
   GUIDraw();
   textDraw();
+  println(volumeButton);
 }//End draw
 //
 void keyPressed() {
@@ -30,5 +31,6 @@ buttonFunctions();
 //
 void mouseReleased(){
 drawTool=false;
+volumeHeld=false;
 }
 //End MAIN
