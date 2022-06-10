@@ -2,7 +2,7 @@
 //
 void buttonFunctions() {
 //Progress Bar Function
-if (mouseX>=displayWidth*16/35 && mouseX<=displayWidth*16/35+progressBarWidth && mouseY>=displayHeight*13/14 && mouseY<=displayHeight*13/14+progressBarHeight) song[currentSong].play(newTime);
+if (mouseX>=displayWidth*16/35 && mouseX<=displayWidth*16/35+progressBarWidth && mouseY>=displayHeight*27/28 && mouseY<=displayHeight*27/28+progressBarHeight) song[currentSong].play(newTime);
 
 //Exit
 if(mouseX>=quitButtonX && mouseX<=quitButtonX + quitButtonWidth && mouseY>=quitButtonY && mouseY<=quitButtonY+quitButtonHeight) exit();
