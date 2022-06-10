@@ -42,8 +42,8 @@ void musicDraw () {
   song[currentSong].play();
   } 
   } 
-  
-}//End musicKeyPressed
+  println(newTime);
+}//End musicDraw
 //
 void musicKeyPressed () {
   if (key=='1' || key=='2' || key=='3' || key=='4' || key=='5' || key=='6' || key=='7' || key=='8' || key=='9') {//looping functions

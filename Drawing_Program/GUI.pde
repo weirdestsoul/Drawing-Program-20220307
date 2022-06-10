@@ -290,5 +290,11 @@ fill(black);
 rect(displayWidth*16/35, displayHeight*13/14,(float(song[currentSong].position())/float(song[currentSong].length()))*progressBarWidth, progressBarHeight);
 fill(white);
 ellipse(displayWidth*16/35+(float(song[currentSong].position())/float(song[currentSong].length()))*progressBarWidth, displayHeight*13/14+displayHeight*1/400, displayHeight*1/125,displayHeight*1/125);
+//
+//Music Buttons
+rect(displayWidth*14/35, displayHeight*51/56, fillButton, fillButton);
+rect(displayWidth*25/70, displayHeight*51/56, fillButton, fillButton);
+rect(displayWidth*26/35, displayHeight*51/56, fillButton, fillButton);
+rect(displayWidth*55/70, displayHeight*51/56, fillButton, fillButton);
 }//End GUIDraw
 //
