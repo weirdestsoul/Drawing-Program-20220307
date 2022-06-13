@@ -10,6 +10,10 @@ Boolean pauseTrue=false, stopTrue = false;
 int numberOfSongs=5;
 int trueNumberOfSongs=numberOfSongs-1;
 AudioPlayer[] song = new AudioPlayer[numberOfSongs];
+AudioPlayer splash;
+AudioPlayer scribble;
+AudioPlayer crumple;
+AudioPlayer erase;
 AudioMetaData[] songMetaData = new AudioMetaData[numberOfSongs]; 
 int currentSong = numberOfSongs - numberOfSongs;
 void musicSetup () {
@@ -19,6 +23,10 @@ void musicSetup () {
   song[currentSong+=1] = minim.loadFile("musicFolder/Jetpack Joyride Theme.mp3");
   song[currentSong+=1] = minim.loadFile("musicFolder/[Electro] - Laszlo - Supernova [Monstercat Release].mp3");
   song[currentSong+=1] = minim.loadFile("musicFolder/Megalovania BASS BOOSTED.mp3");
+  splash = minim.loadFile("soundEffects/Muddy-Water-Splash-www.fesliyanstudios.com.mp3");
+  scribble = minim.loadFile("soundEffects/68885__aboe__scribsht4.wav");
+  crumple = minim.loadFile("soundEffects/Crumbling-Paper-3-www.fesliyanstudios.com.mp3");
+ erase = minim.loadFile("soundEffects/586466__ldf99__pen-erasing.wav");
   //
   currentSong-=currentSong; 
   for (int i=currentSong; i<song.length; i++) {
@@ -144,6 +152,33 @@ void musicKeyPressed () {
 }//End musicKeyPressed
 //
 void musicMousePressed () {
-  
+  //Music Player Buttons
+   if(mouseX>=displayWidth*30/35 && mouseX<=displayWidth*34/35 && mouseY>=displayHeight*27/28 && mouseY<=displayHeight*27/28+progressBarHeight) volumeHeld=true;
+
+   if(mouseX>=displayWidth*17/35 && mouseX<=displayWidth*17/35+fillButton && mouseY>=displayHeight*50/56 && mouseY<=displayHeight*50/56+fillButton){
+
+       if(song[currentSong].isPlaying() && currentSong >=1) {
+        song[currentSong].pause();
+        song[currentSong].rewind();
+        currentSong-=1;
+        song[currentSong].play();
+        } else if (currentSong == 0 && song[currentSong].isPlaying()) {
+        song[currentSong].pause();
+        song[currentSong].rewind();
+        currentSong+=numberOfSongs-1;
+        song[currentSong].play();
+        } else if (currentSong == 0 && !song[currentSong].isPlaying()) {
+        song[currentSong].pause();
+        song[currentSong].rewind();
+        currentSong+=numberOfSongs-1;
+        }else {
+        song[currentSong].pause();
+        song[currentSong].rewind();
+        currentSong-=1;
+  }
+  }
+
+     
+   
   
 }//End musicMousePressed
