@@ -26,7 +26,7 @@ void musicSetup () {
   splash = minim.loadFile("soundEffects/Muddy-Water-Splash-www.fesliyanstudios.com.mp3");
   scribble = minim.loadFile("soundEffects/68885__aboe__scribsht4.wav");
   crumple = minim.loadFile("soundEffects/Crumbling-Paper-3-www.fesliyanstudios.com.mp3");
- erase = minim.loadFile("soundEffects/586466__ldf99__pen-erasing.wav");
+  erase = minim.loadFile("soundEffects/586466__ldf99__pen-erasing.wav");
   //
   currentSong-=currentSong; 
   for (int i=currentSong; i<song.length; i++) {
@@ -152,11 +152,21 @@ void musicKeyPressed () {
 }//End musicKeyPressed
 //
 void musicMousePressed () {
+  //Progress Bar Function
+  if (mouseX>=displayWidth*16/35 && mouseX<=displayWidth*16/35+progressBarWidth && mouseY>=displayHeight*27/28 && mouseY<=displayHeight*27/28+progressBarHeight){ 
+    if(song[currentSong].isPlaying()){
+    song[currentSong].play(newTime);
+    }
+    if(!song[currentSong].isPlaying()){
+    song[currentSong].play(newTime);
+    song[currentSong].pause();
+    }
+  }
   //Music Player Buttons
    if(mouseX>=displayWidth*30/35 && mouseX<=displayWidth*34/35 && mouseY>=displayHeight*27/28 && mouseY<=displayHeight*27/28+progressBarHeight) volumeHeld=true;
-
-   if(mouseX>=displayWidth*17/35 && mouseX<=displayWidth*17/35+fillButton && mouseY>=displayHeight*50/56 && mouseY<=displayHeight*50/56+fillButton){
-
+  //Previous Button
+   if(mouseX>=displayWidth*37/70 && mouseX<=displayWidth*37/70+fillButton && mouseY>=displayHeight*50/56 && mouseY<=displayHeight*50/56+fillButton){
+       if(song[currentSong].position()<=5000){
        if(song[currentSong].isPlaying() && currentSong >=1) {
         song[currentSong].pause();
         song[currentSong].rewind();
@@ -175,10 +185,54 @@ void musicMousePressed () {
         song[currentSong].pause();
         song[currentSong].rewind();
         currentSong-=1;
+      }
+    }
+      if(song[currentSong].position()>=5000){
+      if(song[currentSong].isPlaying()){
+        song[currentSong].rewind();
+      }
+      if(!song[currentSong].isPlaying()){
+      song[currentSong].rewind();
+      song[currentSong].pause();
+      }
+     } 
+   }
+  //
+  //Next Button
+  if(mouseX>=displayWidth*43/70 && mouseX<=displayWidth*43/70+fillButton && mouseY>=displayHeight*50/56 && mouseY<=displayHeight*50/56+fillButton){
+    if(song[currentSong].isPlaying() && currentSong < trueNumberOfSongs) {
+  song[currentSong].pause();
+  song[currentSong].rewind();
+  currentSong++;
+  song[currentSong].play();
+  } else if (currentSong == trueNumberOfSongs && song[currentSong].isPlaying()) {
+  song[currentSong].pause();
+  song[currentSong].rewind();
+  currentSong -= currentSong;
+  song[currentSong].play();
+  } else if (currentSong == trueNumberOfSongs && !song[currentSong].isPlaying()) {
+  song[currentSong].pause();
+  song[currentSong].rewind();
+  currentSong -= currentSong;
+  }else {
+  song[currentSong].pause();
+  song[currentSong].rewind();
+  currentSong++;
   }
   }
+  //Loop
+if(mouseX>=displayWidth*17/35 && mouseX<=displayWidth*17/35+fillButton && mouseY>=displayHeight*50/56 && mouseY<=displayHeight*50/56+fillButton){
+song[currentSong].loop();
+}else if(mouseX>=displayWidth*17/35 && mouseX<=displayWidth*17/35+fillButton && mouseY>=displayHeight*50/56 && mouseY<=displayHeight*50/56+fillButton){
+song[currentSong].play();}
+  //Pause Button
+  if(mouseX>=displayWidth*20/35 && mouseX<=displayWidth*20/35+fillButton && mouseY>=displayHeight*50/56 && mouseY<=displayHeight*50/56+fillButton && song[currentSong].isPlaying()){
+    song[currentSong].pause();
+    pauseTrue=true;
+    }else if(mouseX>=displayWidth*20/35 && mouseX<=displayWidth*20/35+fillButton && mouseY>=displayHeight*50/56 && mouseY<=displayHeight*50/56+fillButton && !song[currentSong].isPlaying()){
+    song[currentSong].play();
+    pauseTrue=false;
+}
 
-     
-   
   
 }//End musicMousePressed

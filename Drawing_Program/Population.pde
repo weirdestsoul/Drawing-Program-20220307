@@ -1,5 +1,5 @@
 //Global Variables
-Boolean drawTool=false, drawLine = true, eraser=false, paper=false, drawCircle = false, drawTriangle=false, drawRectangle=false, volumeHeld=false;
+Boolean drawTool=false, drawLine = true, eraser=false, paper=false, drawCircle = false, drawTriangle=false, drawRectangle=false, volumeHeld=false, shuffle=false;
 float drawingSurfaceX, drawingSurfaceY, drawingSurfaceWidth, drawingSurfaceHeight;
 float quitButtonX, quitButtonY, quitButtonWidth, quitButtonHeight;
 float drawingDiameter;
