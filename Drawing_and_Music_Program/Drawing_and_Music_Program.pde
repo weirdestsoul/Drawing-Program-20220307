@@ -2,7 +2,6 @@
 //Global Variables
 //
 void setup() {
-  //Manditory: Mistaken display orientation should break app, feedback to console CANVAS
   frameRate(144);
   fullScreen(); //displayWidth, displayHeight
   population();
