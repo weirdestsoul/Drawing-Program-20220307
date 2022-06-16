@@ -299,10 +299,54 @@ if(volumeButton>=1 )rect(displayWidth*30/35, displayHeight*27/28, (displayWidth*
 fill(white);
 //
 //Music Buttons
-rect(displayWidth*17/35, displayHeight*50/56, fillButton, fillButton);
-rect(displayWidth*37/70, displayHeight*50/56, fillButton, fillButton);
-rect(displayWidth*23/35, displayHeight*50/56, fillButton, fillButton);
-rect(displayWidth*43/70, displayHeight*50/56, fillButton, fillButton);
-rect(displayWidth*20/35, displayHeight*50/56, fillButton, fillButton);
+if(mouseX>=displayWidth*17/35 && mouseX<=displayWidth*17/35+fillButton && mouseY>=displayHeight*50/56 && mouseY<=displayHeight*50/56+fillButton){
+  fill(yellow);
+  strokeWeight(2);
+  rect(displayWidth*17/35, displayHeight*50/56, fillButton, fillButton);
+}else{
+  fill(white);
+  strokeWeight(noStroke);
+  rect(displayWidth*17/35, displayHeight*50/56, fillButton, fillButton);
+}
+if(mouseX>=displayWidth*37/70 && mouseX<=displayWidth*37/70+fillButton && mouseY>=displayHeight*50/56 && mouseY<=displayHeight*50/56+fillButton){
+  fill(yellow);
+  strokeWeight(2);
+  rect(displayWidth*37/70, displayHeight*50/56, fillButton, fillButton);
+}else{
+  fill(white);
+  strokeWeight(noStroke);
+  rect(displayWidth*37/70, displayHeight*50/56, fillButton, fillButton);
+}
+if(mouseX>=displayWidth*23/35 && mouseX<=displayWidth*23/35+fillButton && mouseY>=displayHeight*50/56 && mouseY<=displayHeight*50/56+fillButton){
+  fill(yellow);
+  strokeWeight(2);
+  rect(displayWidth*23/35, displayHeight*50/56, fillButton, fillButton);
+}else{
+  fill(white);
+  strokeWeight(noStroke);
+  rect(displayWidth*23/35, displayHeight*50/56, fillButton, fillButton);
+}
+if(mouseX>=displayWidth*43/70 && mouseX<=displayWidth*43/70+fillButton && mouseY>=displayHeight*50/56 && mouseY<=displayHeight*50/56+fillButton){
+  fill(yellow);
+  strokeWeight(2);
+  rect(displayWidth*43/70, displayHeight*50/56, fillButton, fillButton);
+}else{
+  fill(white);
+  strokeWeight(noStroke);
+  rect(displayWidth*43/70, displayHeight*50/56, fillButton, fillButton);
+}
+if(mouseX>=displayWidth*20/35 && mouseX<=displayWidth*20/35+fillButton && mouseY>=displayHeight*50/56 && mouseY<=displayHeight*50/56+fillButton){
+  fill(yellow);
+  strokeWeight(2);
+  rect(displayWidth*20/35, displayHeight*50/56, fillButton, fillButton);
+}else{
+  fill(white);
+  strokeWeight(noStroke);
+  rect(displayWidth*20/35, displayHeight*50/56, fillButton, fillButton);
+}
+strokeWeight(2);
+fill(white);
+rect(displayWidth*7/35,displayHeight*49/56, displayWidth*6/35, displayHeight*3/35);
+
 }//End GUIDraw
 //
