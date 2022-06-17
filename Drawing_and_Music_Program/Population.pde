@@ -1,5 +1,5 @@
 //Global Variables
-Boolean drawTool=false, drawLine = true, eraser=false, paper=false, drawCircle = false, drawTriangle=false, drawRectangle=false, volumeHeld=false, shuffle=false;
+Boolean drawTool=false, drawLine = true, eraser=false, paper=false, drawCircle = false, drawTriangle=false, drawRectangle=false, volumeHeld=false, loopF = false;
 float drawingSurfaceX, drawingSurfaceY, drawingSurfaceWidth, drawingSurfaceHeight;
 float quitButtonX, quitButtonY, quitButtonWidth, quitButtonHeight;
 float drawingDiameter;
@@ -24,8 +24,8 @@ void population() {
   quitButtonHeight = displayWidth*1/40;
   secondTextX = displayWidth*4/35;
   secondTextY = displayWidth*9/35;
-  secondTextWidth = displayWidth*1/35;
-  secondTextHeight = displayWidth*1/35;
+  secondTextWidth = displayWidth*1/37;
+  secondTextHeight = displayWidth*1/37;
   fillButton = displayWidth*1/35;
   strokeWidth = displayWidth*1/37;
   strokeHeight = displayWidth*2/37;

@@ -4,6 +4,11 @@ int initialFontSize = 55;
 int size;
 String quitButtonString = "x";
 String secondTextString = "Paper";
+String time1 = "4:04";
+String time2 = "4:50";
+String time3 = "2:17";
+String time4 = "5:45";
+String time5 = "5:00";
 //
 void textSetup() {
    font = createFont ("Leelawadee UI Semilight", initialFontSize);
@@ -59,6 +64,15 @@ fill(black);
 textAlign(CENTER,CENTER);
 size=20;
 textFont(font, size);
-text(totalTime, displayWidth*47/70,displayHeight*53/56, displayWidth*4/35, displayHeight*1/35);
+if(currentSong==0)text(time1, displayWidth*47/70,displayHeight*53/56, displayWidth*4/35, displayHeight*1/35);
+//
+if(currentSong==1)text(time2, displayWidth*47/70,displayHeight*53/56, displayWidth*4/35, displayHeight*1/35);
+//
+if(currentSong==2)text(time3, displayWidth*47/70,displayHeight*53/56, displayWidth*4/35, displayHeight*1/35);
+//
+if(currentSong==3)text(time4, displayWidth*47/70,displayHeight*53/56, displayWidth*4/35, displayHeight*1/35);
+//
+if(currentSong==4)text(time5, displayWidth*47/70,displayHeight*53/56, displayWidth*4/35, displayHeight*1/35);
+//
 fill(reset);
 }//End textDraw

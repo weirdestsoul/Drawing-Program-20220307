@@ -1,7 +1,9 @@
 //Global Variables
 float fillButton, strokeWidth, strokeHeight, shapeWidth, shapeHeight;
+PImage play, pause, next, back, loop;
 //
 void GUIDraw() {
+
 //Background
 fill(GUI);
 strokeWeight(noStroke);
@@ -30,176 +32,176 @@ fill(black); //Ink
 //Draw colour buttons
 strokeWeight(noStroke);
 //row 1
-if(mouseX>=displayWidth*1/35 && mouseX<=displayWidth*1/35+fillButton && mouseY>= displayWidth*1/35 && mouseY<=displayWidth*1/35+fillButton) {strokeWeight(2);} else {
+if(mouseX>=displayWidth*1/35 && mouseX<=displayWidth*1/35+strokeWidth && mouseY>= displayWidth*1/35 && mouseY<=displayWidth*1/35+strokeWidth) {strokeWeight(2);} else {
   strokeWeight(0);}
 fill(red);
-rect(displayWidth*1/35, displayWidth*1/35, fillButton, fillButton);
+rect(displayWidth*1/35, displayWidth*1/35, strokeWidth, strokeWidth);
 strokeWeight(0);
-if(mouseX>=displayWidth*2/35 && mouseX<=displayWidth*2/35+fillButton && mouseY>= displayWidth*1/35 && mouseY<=displayWidth*1/35+fillButton) {strokeWeight(2);} else {
+if(mouseX>=displayWidth*2/35 && mouseX<=displayWidth*2/35+strokeWidth && mouseY>= displayWidth*1/35 && mouseY<=displayWidth*1/35+strokeWidth) {strokeWeight(2);} else {
   strokeWeight(0);}
 fill(rorange);
-rect(displayWidth*2/35, displayWidth*1/35, fillButton, fillButton);
+rect(displayWidth*2/35, displayWidth*1/35, strokeWidth, strokeWidth);
 strokeWeight(0);
-if(mouseX>=displayWidth*3/35 && mouseX<=displayWidth*3/35+fillButton && mouseY>= displayWidth*1/35 && mouseY<=displayWidth*1/35+fillButton) {strokeWeight(2);} else {
+if(mouseX>=displayWidth*3/35 && mouseX<=displayWidth*3/35+strokeWidth && mouseY>= displayWidth*1/35 && mouseY<=displayWidth*1/35+strokeWidth) {strokeWeight(2);} else {
   strokeWeight(0);}
 fill(orange);
-rect(displayWidth*3/35, displayWidth*1/35, fillButton, fillButton);
+rect(displayWidth*3/35, displayWidth*1/35, strokeWidth, strokeWidth);
 strokeWeight(0);
-if(mouseX>=displayWidth*4/35 && mouseX<=displayWidth*4/35+fillButton && mouseY>= displayWidth*1/35 && mouseY<=displayWidth*1/35+fillButton) {strokeWeight(2);} else {
+if(mouseX>=displayWidth*4/35 && mouseX<=displayWidth*4/35+strokeWidth && mouseY>= displayWidth*1/35 && mouseY<=displayWidth*1/35+strokeWidth) {strokeWeight(2);} else {
   strokeWeight(0);}
 fill(yorange);
-rect(displayWidth*4/35, displayWidth*1/35, fillButton, fillButton);
+rect(displayWidth*4/35, displayWidth*1/35, strokeWidth, strokeWidth);
 strokeWeight(0);
 //row 2
-if(mouseX>=displayWidth*1/35 && mouseX<=displayWidth*1/35+fillButton && mouseY>= displayWidth*2/35 && mouseY<=displayWidth*2/35+fillButton) {strokeWeight(2);} else {
+if(mouseX>=displayWidth*1/35 && mouseX<=displayWidth*1/35+strokeWidth && mouseY>= displayWidth*2/35 && mouseY<=displayWidth*2/35+strokeWidth) {strokeWeight(2);} else {
   strokeWeight(0);}
 fill(yellow);
-rect(displayWidth*1/35, displayWidth*2/35, fillButton, fillButton);
+rect(displayWidth*1/35, displayWidth*2/35, strokeWidth, strokeWidth);
 strokeWeight(0);
-if(mouseX>=displayWidth*2/35 && mouseX<=displayWidth*2/35+fillButton && mouseY>= displayWidth*2/35 && mouseY<=displayWidth*2/35+fillButton) {strokeWeight(2);} else {
+if(mouseX>=displayWidth*2/35 && mouseX<=displayWidth*2/35+strokeWidth && mouseY>= displayWidth*2/35 && mouseY<=displayWidth*2/35+strokeWidth) {strokeWeight(2);} else {
  strokeWeight(0);}
 fill(ygreen);
-rect(displayWidth*2/35, displayWidth*2/35, fillButton, fillButton);
+rect(displayWidth*2/35, displayWidth*2/35, strokeWidth, strokeWidth);
 strokeWeight(0);
-if(mouseX>=displayWidth*3/35 && mouseX<=displayWidth*3/35+fillButton && mouseY>= displayWidth*2/35 && mouseY<=displayWidth*2/35+fillButton) {strokeWeight(2);} else {
+if(mouseX>=displayWidth*3/35 && mouseX<=displayWidth*3/35+strokeWidth && mouseY>= displayWidth*2/35 && mouseY<=displayWidth*2/35+strokeWidth) {strokeWeight(2);} else {
   strokeWeight(0);}
 fill(green);
-rect(displayWidth*3/35, displayWidth*2/35, fillButton, fillButton);
+rect(displayWidth*3/35, displayWidth*2/35, strokeWidth, strokeWidth);
 strokeWeight(0);
-if(mouseX>=displayWidth*4/35 && mouseX<=displayWidth*4/35+fillButton && mouseY>= displayWidth*2/35 && mouseY<=displayWidth*2/35+fillButton) {strokeWeight(2);} else {
+if(mouseX>=displayWidth*4/35 && mouseX<=displayWidth*4/35+strokeWidth && mouseY>= displayWidth*2/35 && mouseY<=displayWidth*2/35+strokeWidth) {strokeWeight(2);} else {
   strokeWeight(0);}
 fill(bgreen);
-rect(displayWidth*4/35, displayWidth*2/35, fillButton, fillButton);
+rect(displayWidth*4/35, displayWidth*2/35, strokeWidth, strokeWidth);
 strokeWeight(0);
 //row 3
-if(mouseX>=displayWidth*1/35 && mouseX<=displayWidth*1/35+fillButton && mouseY>= displayWidth*3/35 && mouseY<=displayWidth*3/35+fillButton) {strokeWeight(2);} else {
+if(mouseX>=displayWidth*1/35 && mouseX<=displayWidth*1/35+strokeWidth && mouseY>= displayWidth*3/35 && mouseY<=displayWidth*3/35+strokeWidth) {strokeWeight(2);} else {
   strokeWeight(0);}
 fill(blue);
-rect(displayWidth*1/35, displayWidth*3/35, fillButton, fillButton);
+rect(displayWidth*1/35, displayWidth*3/35, strokeWidth, strokeWidth);
 strokeWeight(0);
-if(mouseX>=displayWidth*2/35 && mouseX<=displayWidth*2/35+fillButton && mouseY>= displayWidth*3/35 && mouseY<=displayWidth*3/35+fillButton) {strokeWeight(2);} else {
+if(mouseX>=displayWidth*2/35 && mouseX<=displayWidth*2/35+strokeWidth && mouseY>= displayWidth*3/35 && mouseY<=displayWidth*3/35+strokeWidth) {strokeWeight(2);} else {
   strokeWeight(0);}
 fill(bviolet);
-rect(displayWidth*2/35, displayWidth*3/35, fillButton, fillButton);
+rect(displayWidth*2/35, displayWidth*3/35, strokeWidth, strokeWidth);
 strokeWeight(0);
-if(mouseX>=displayWidth*3/35 && mouseX<=displayWidth*3/35+fillButton && mouseY>= displayWidth*3/35 && mouseY<=displayWidth*3/35+fillButton) {strokeWeight(2);} else {
+if(mouseX>=displayWidth*3/35 && mouseX<=displayWidth*3/35+strokeWidth && mouseY>= displayWidth*3/35 && mouseY<=displayWidth*3/35+strokeWidth) {strokeWeight(2);} else {
   strokeWeight(0);}
 fill(violet);
-rect(displayWidth*3/35, displayWidth*3/35, fillButton, fillButton);
+rect(displayWidth*3/35, displayWidth*3/35, strokeWidth, strokeWidth);
 strokeWeight(0);
-if(mouseX>=displayWidth*4/35 && mouseX<=displayWidth*4/35+fillButton && mouseY>= displayWidth*4/35 && mouseY<=displayWidth*3/35+fillButton) {strokeWeight(2);} else {
+if(mouseX>=displayWidth*4/35 && mouseX<=displayWidth*4/35+strokeWidth && mouseY>= displayWidth*4/35 && mouseY<=displayWidth*3/35+strokeWidth) {strokeWeight(2);} else {
   strokeWeight(0);}
 fill(rviolet);
-rect(displayWidth*4/35, displayWidth*3/35, fillButton, fillButton);
+rect(displayWidth*4/35, displayWidth*3/35, strokeWidth, strokeWidth);
 strokeWeight(0);
 //row 4
-if(mouseX>=displayWidth*1/35 && mouseX<=displayWidth*1/35+fillButton && mouseY>= displayWidth*4/35 && mouseY<=displayWidth*4/35+fillButton) {strokeWeight(2);} else {
+if(mouseX>=displayWidth*1/35 && mouseX<=displayWidth*1/35+strokeWidth && mouseY>= displayWidth*4/35 && mouseY<=displayWidth*4/35+strokeWidth) {strokeWeight(2);} else {
   strokeWeight(0);}
 fill(black);
-rect(displayWidth*1/35, displayWidth*4/35, fillButton, fillButton);
+rect(displayWidth*1/35, displayWidth*4/35, strokeWidth, strokeWidth);
 strokeWeight(0);
-if(mouseX>=displayWidth*2/35 && mouseX<=displayWidth*2/35+fillButton && mouseY>= displayWidth*4/35 && mouseY<=displayWidth*4/35+fillButton) {strokeWeight(2);} else {
+if(mouseX>=displayWidth*2/35 && mouseX<=displayWidth*2/35+strokeWidth && mouseY>= displayWidth*4/35 && mouseY<=displayWidth*4/35+strokeWidth) {strokeWeight(2);} else {
   strokeWeight(0);}
 fill(dgrey);
-rect(displayWidth*2/35, displayWidth*4/35, fillButton, fillButton);
+rect(displayWidth*2/35, displayWidth*4/35, strokeWidth, strokeWidth);
 strokeWeight(0);
-if(mouseX>=displayWidth*3/35 && mouseX<=displayWidth*3/35+fillButton && mouseY>= displayWidth*4/35 && mouseY<=displayWidth*4/35+fillButton) {strokeWeight(2);} else {
+if(mouseX>=displayWidth*3/35 && mouseX<=displayWidth*3/35+strokeWidth && mouseY>= displayWidth*4/35 && mouseY<=displayWidth*4/35+strokeWidth) {strokeWeight(2);} else {
   strokeWeight(0);}
 fill(white);
-rect(displayWidth*3/35, displayWidth*4/35, fillButton, fillButton);
+rect(displayWidth*3/35, displayWidth*4/35, strokeWidth, strokeWidth);
 strokeWeight(0);
-if(mouseX>=displayWidth*4/35 && mouseX<=displayWidth*4/35+fillButton && mouseY>= displayWidth*4/35 && mouseY<=displayWidth*4/35+fillButton) {strokeWeight(2);} else {
+if(mouseX>=displayWidth*4/35 && mouseX<=displayWidth*4/35+strokeWidth && mouseY>= displayWidth*4/35 && mouseY<=displayWidth*4/35+strokeWidth) {strokeWeight(2);} else {
   strokeWeight(0);}
 fill(backgroundColour);
-rect(displayWidth*4/35, displayWidth*4/35, fillButton, fillButton);
+rect(displayWidth*4/35, displayWidth*4/35, strokeWidth, strokeWidth);
 strokeWeight(0);
 //
 strokeWeight(strokeReset);
 //background fill buttons
 strokeWeight(noStroke);
 //row 1
-if(mouseX>=displayWidth*1/35 && mouseX<=displayWidth*1/35+fillButton && mouseY>= displayWidth*6/35 && mouseY<=displayWidth*6/35+fillButton) {strokeWeight(2);} else {
+if(mouseX>=displayWidth*1/35 && mouseX<=displayWidth*1/35+strokeWidth && mouseY>= displayWidth*6/35 && mouseY<=displayWidth*6/35+strokeWidth) {strokeWeight(2);} else {
   strokeWeight(0);}
 fill(red);
-rect(displayWidth*1/35, displayWidth*6/35, fillButton, fillButton);
+rect(displayWidth*1/35, displayWidth*6/35, strokeWidth, strokeWidth);
 strokeWeight(0);
-if(mouseX>=displayWidth*2/35 && mouseX<=displayWidth*2/35+fillButton && mouseY>= displayWidth*6/35 && mouseY<=displayWidth*6/35+fillButton) {strokeWeight(2);} else {
+if(mouseX>=displayWidth*2/35 && mouseX<=displayWidth*2/35+strokeWidth && mouseY>= displayWidth*6/35 && mouseY<=displayWidth*6/35+strokeWidth) {strokeWeight(2);} else {
   strokeWeight(0);}
 fill(rorange);
-rect(displayWidth*2/35, displayWidth*6/35, fillButton, fillButton);
+rect(displayWidth*2/35, displayWidth*6/35, strokeWidth, strokeWidth);
 strokeWeight(0);
-if(mouseX>=displayWidth*3/35 && mouseX<=displayWidth*3/35+fillButton && mouseY>= displayWidth*6/35 && mouseY<=displayWidth*6/35+fillButton) {strokeWeight(2);} else {
+if(mouseX>=displayWidth*3/35 && mouseX<=displayWidth*3/35+strokeWidth && mouseY>= displayWidth*6/35 && mouseY<=displayWidth*6/35+strokeWidth) {strokeWeight(2);} else {
   strokeWeight(0);}
 fill(orange);
-rect(displayWidth*3/35, displayWidth*6/35, fillButton, fillButton);
+rect(displayWidth*3/35, displayWidth*6/35, strokeWidth, strokeWidth);
 strokeWeight(0);
-if(mouseX>=displayWidth*4/35 && mouseX<=displayWidth*4/35+fillButton && mouseY>= displayWidth*6/35 && mouseY<=displayWidth*6/35+fillButton) {strokeWeight(2);} else {
+if(mouseX>=displayWidth*4/35 && mouseX<=displayWidth*4/35+strokeWidth && mouseY>= displayWidth*6/35 && mouseY<=displayWidth*6/35+strokeWidth) {strokeWeight(2);} else {
   strokeWeight(0);}
 fill(yorange);
-rect(displayWidth*4/35, displayWidth*6/35, fillButton, fillButton);
+rect(displayWidth*4/35, displayWidth*6/35, strokeWidth, strokeWidth);
 strokeWeight(0);
 //row 2
-if(mouseX>=displayWidth*1/35 && mouseX<=displayWidth*1/35+fillButton && mouseY>= displayWidth*7/35 && mouseY<=displayWidth*7/35+fillButton) {strokeWeight(2);} else {
+if(mouseX>=displayWidth*1/35 && mouseX<=displayWidth*1/35+strokeWidth && mouseY>= displayWidth*7/35 && mouseY<=displayWidth*7/35+strokeWidth) {strokeWeight(2);} else {
   strokeWeight(0);}
 fill(yellow);
-rect(displayWidth*1/35, displayWidth*7/35, fillButton, fillButton);
+rect(displayWidth*1/35, displayWidth*7/35, strokeWidth, strokeWidth);
 strokeWeight(0);
-if(mouseX>=displayWidth*2/35 && mouseX<=displayWidth*2/35+fillButton && mouseY>= displayWidth*7/35 && mouseY<=displayWidth*7/35+fillButton) {strokeWeight(2);} else {
+if(mouseX>=displayWidth*2/35 && mouseX<=displayWidth*2/35+strokeWidth && mouseY>= displayWidth*7/35 && mouseY<=displayWidth*7/35+strokeWidth) {strokeWeight(2);} else {
   strokeWeight(0);}
 fill(ygreen);
-rect(displayWidth*2/35, displayWidth*7/35, fillButton, fillButton);
+rect(displayWidth*2/35, displayWidth*7/35, strokeWidth, strokeWidth);
 strokeWeight(0);
-if(mouseX>=displayWidth*3/35 && mouseX<=displayWidth*3/35+fillButton && mouseY>= displayWidth*7/35 && mouseY<=displayWidth*7/35+fillButton) {strokeWeight(2);} else {
+if(mouseX>=displayWidth*3/35 && mouseX<=displayWidth*3/35+strokeWidth && mouseY>= displayWidth*7/35 && mouseY<=displayWidth*7/35+strokeWidth) {strokeWeight(2);} else {
   strokeWeight(0);}
 fill(green);
-rect(displayWidth*3/35, displayWidth*7/35, fillButton, fillButton);
+rect(displayWidth*3/35, displayWidth*7/35, strokeWidth, strokeWidth);
 strokeWeight(0);
-if(mouseX>=displayWidth*4/35 && mouseX<=displayWidth*4/35+fillButton && mouseY>= displayWidth*7/35 && mouseY<=displayWidth*7/35+fillButton) {strokeWeight(2);} else {
+if(mouseX>=displayWidth*4/35 && mouseX<=displayWidth*4/35+strokeWidth && mouseY>= displayWidth*7/35 && mouseY<=displayWidth*7/35+strokeWidth) {strokeWeight(2);} else {
   strokeWeight(0);}
 fill(bgreen);
-rect(displayWidth*4/35, displayWidth*7/35, fillButton, fillButton);
+rect(displayWidth*4/35, displayWidth*7/35, strokeWidth, strokeWidth);
 strokeWeight(0);
 //row 3
-if(mouseX>=displayWidth*1/35 && mouseX<=displayWidth*1/35+fillButton && mouseY>= displayWidth*8/35 && mouseY<=displayWidth*8/35+fillButton) {strokeWeight(2);} else {
+if(mouseX>=displayWidth*1/35 && mouseX<=displayWidth*1/35+strokeWidth && mouseY>= displayWidth*8/35 && mouseY<=displayWidth*8/35+strokeWidth) {strokeWeight(2);} else {
   strokeWeight(0);}
 fill(blue);
-rect(displayWidth*1/35, displayWidth*8/35, fillButton, fillButton);
+rect(displayWidth*1/35, displayWidth*8/35, strokeWidth, strokeWidth);
 strokeWeight(0);
-if(mouseX>=displayWidth*2/35 && mouseX<=displayWidth*2/35+fillButton && mouseY>= displayWidth*8/35 && mouseY<=displayWidth*8/35+fillButton) {strokeWeight(2);} else {
+if(mouseX>=displayWidth*2/35 && mouseX<=displayWidth*2/35+strokeWidth && mouseY>= displayWidth*8/35 && mouseY<=displayWidth*8/35+strokeWidth) {strokeWeight(2);} else {
   strokeWeight(0);}
 fill(bviolet);
-rect(displayWidth*2/35, displayWidth*8/35, fillButton, fillButton);
+rect(displayWidth*2/35, displayWidth*8/35, strokeWidth, strokeWidth);
 strokeWeight(0);
-if(mouseX>=displayWidth*3/35 && mouseX<=displayWidth*3/35+fillButton && mouseY>= displayWidth*8/35 && mouseY<=displayWidth*8/35+fillButton) {strokeWeight(2);} else {
+if(mouseX>=displayWidth*3/35 && mouseX<=displayWidth*3/35+strokeWidth && mouseY>= displayWidth*8/35 && mouseY<=displayWidth*8/35+strokeWidth) {strokeWeight(2);} else {
   strokeWeight(0);}
 fill(violet);
-rect(displayWidth*3/35, displayWidth*8/35, fillButton, fillButton);
+rect(displayWidth*3/35, displayWidth*8/35, strokeWidth, strokeWidth);
 strokeWeight(0);
-if(mouseX>=displayWidth*4/35 && mouseX<=displayWidth*4/35+fillButton && mouseY>= displayWidth*8/35 && mouseY<=displayWidth*8/35+fillButton) {strokeWeight(2);} else {
+if(mouseX>=displayWidth*4/35 && mouseX<=displayWidth*4/35+strokeWidth && mouseY>= displayWidth*8/35 && mouseY<=displayWidth*8/35+strokeWidth) {strokeWeight(2);} else {
   strokeWeight(0);}
 fill(rviolet);
-rect(displayWidth*4/35, displayWidth*8/35, fillButton, fillButton);
+rect(displayWidth*4/35, displayWidth*8/35, strokeWidth, strokeWidth);
 strokeWeight(0);
 //row 4
-if(mouseX>=displayWidth*1/35 && mouseX<=displayWidth*1/35+fillButton && mouseY>= displayWidth*9/35 && mouseY<=displayWidth*9/35+fillButton) {strokeWeight(2);} else {
+if(mouseX>=displayWidth*1/35 && mouseX<=displayWidth*1/35+strokeWidth && mouseY>= displayWidth*9/35 && mouseY<=displayWidth*9/35+strokeWidth) {strokeWeight(2);} else {
   strokeWeight(0);}
 fill(black);
-rect(displayWidth*1/35, displayWidth*9/35, fillButton, fillButton);
+rect(displayWidth*1/35, displayWidth*9/35, strokeWidth, strokeWidth);
 strokeWeight(0);
-if(mouseX>=displayWidth*2/35 && mouseX<=displayWidth*2/35+fillButton && mouseY>= displayWidth*9/35 && mouseY<=displayWidth*9/35+fillButton) {strokeWeight(2);} else {
+if(mouseX>=displayWidth*2/35 && mouseX<=displayWidth*2/35+strokeWidth && mouseY>= displayWidth*9/35 && mouseY<=displayWidth*9/35+strokeWidth) {strokeWeight(2);} else {
   strokeWeight(0);}
 fill(dgrey);
-rect(displayWidth*2/35, displayWidth*9/35, fillButton, fillButton);
+rect(displayWidth*2/35, displayWidth*9/35, strokeWidth, strokeWidth);
 strokeWeight(0);
-if(mouseX>=displayWidth*3/35 && mouseX<=displayWidth*3/35+fillButton && mouseY>= displayWidth*9/35 && mouseY<=displayWidth*9/35+fillButton) {strokeWeight(2);} else {
+if(mouseX>=displayWidth*3/35 && mouseX<=displayWidth*3/35+strokeWidth && mouseY>= displayWidth*9/35 && mouseY<=displayWidth*9/35+strokeWidth) {strokeWeight(2);} else {
   strokeWeight(0);}
 fill(white);
-rect(displayWidth*3/35, displayWidth*9/35, fillButton, fillButton);
+rect(displayWidth*3/35, displayWidth*9/35, strokeWidth, strokeWidth);
 strokeWeight(0);
-if(mouseX>=displayWidth*4/35 && mouseX<=displayWidth*4/35+fillButton && mouseY>= displayWidth*9/35 && mouseY<=displayWidth*9/35+fillButton) {strokeWeight(2);} else {
+if(mouseX>=displayWidth*4/35 && mouseX<=displayWidth*4/35+strokeWidth && mouseY>= displayWidth*9/35 && mouseY<=displayWidth*9/35+strokeWidth) {strokeWeight(2);} else {
   strokeWeight(0);}
 fill(backgroundColour);
-rect(displayWidth*4/35, displayWidth*9/35, fillButton, fillButton);
+rect(displayWidth*4/35, displayWidth*9/35, strokeWidth, strokeWidth);
 strokeWeight(0);
 //
 //Stroke buttons
@@ -299,54 +301,59 @@ if(volumeButton>=1 )rect(displayWidth*30/35, displayHeight*27/28, (displayWidth*
 fill(white);
 //
 //Music Buttons
-if(mouseX>=displayWidth*17/35 && mouseX<=displayWidth*17/35+fillButton && mouseY>=displayHeight*50/56 && mouseY<=displayHeight*50/56+fillButton){
+if(mouseX>=displayWidth*54/105 && mouseX<=displayWidth*54/105+fillButton && mouseY>=displayHeight*50/56 && mouseY<=displayHeight*50/56+fillButton){
   fill(yellow);
   strokeWeight(2);
-  rect(displayWidth*17/35, displayHeight*50/56, fillButton, fillButton);
+  rect(displayWidth*54/105, displayHeight*50/56, fillButton, fillButton);
 }else{
+  if(loopF==true){
+    fill(yellow);
+  }else{
   fill(white);
+  }
   strokeWeight(noStroke);
-  rect(displayWidth*17/35, displayHeight*50/56, fillButton, fillButton);
+  rect(displayWidth*54/105, displayHeight*50/56, fillButton, fillButton);
 }
-if(mouseX>=displayWidth*37/70 && mouseX<=displayWidth*37/70+fillButton && mouseY>=displayHeight*50/56 && mouseY<=displayHeight*50/56+fillButton){
+if(mouseX>=displayWidth*58/105 && mouseX<=displayWidth*58/105+fillButton && mouseY>=displayHeight*50/56 && mouseY<=displayHeight*50/56+fillButton){
   fill(yellow);
   strokeWeight(2);
-  rect(displayWidth*37/70, displayHeight*50/56, fillButton, fillButton);
+  rect(displayWidth*58/105, displayHeight*50/56, fillButton, fillButton);
 }else{
   fill(white);
   strokeWeight(noStroke);
-  rect(displayWidth*37/70, displayHeight*50/56, fillButton, fillButton);
+  rect(displayWidth*58/105, displayHeight*50/56, fillButton, fillButton);
 }
-if(mouseX>=displayWidth*23/35 && mouseX<=displayWidth*23/35+fillButton && mouseY>=displayHeight*50/56 && mouseY<=displayHeight*50/56+fillButton){
+if(mouseX>=displayWidth*66/105 && mouseX<=displayWidth*66/105+fillButton && mouseY>=displayHeight*50/56 && mouseY<=displayHeight*50/56+fillButton){
   fill(yellow);
   strokeWeight(2);
-  rect(displayWidth*23/35, displayHeight*50/56, fillButton, fillButton);
+  rect(displayWidth*66/105, displayHeight*50/56, fillButton, fillButton);
 }else{
   fill(white);
   strokeWeight(noStroke);
-  rect(displayWidth*23/35, displayHeight*50/56, fillButton, fillButton);
+  rect(displayWidth*66/105, displayHeight*50/56, fillButton, fillButton);
 }
-if(mouseX>=displayWidth*43/70 && mouseX<=displayWidth*43/70+fillButton && mouseY>=displayHeight*50/56 && mouseY<=displayHeight*50/56+fillButton){
+if(mouseX>=displayWidth*62/105 && mouseX<=displayWidth*62/105+fillButton && mouseY>=displayHeight*50/56 && mouseY<=displayHeight*50/56+fillButton){
   fill(yellow);
   strokeWeight(2);
-  rect(displayWidth*43/70, displayHeight*50/56, fillButton, fillButton);
+  rect(displayWidth*62/105, displayHeight*50/56, fillButton, fillButton);
 }else{
   fill(white);
   strokeWeight(noStroke);
-  rect(displayWidth*43/70, displayHeight*50/56, fillButton, fillButton);
-}
-if(mouseX>=displayWidth*20/35 && mouseX<=displayWidth*20/35+fillButton && mouseY>=displayHeight*50/56 && mouseY<=displayHeight*50/56+fillButton){
-  fill(yellow);
-  strokeWeight(2);
-  rect(displayWidth*20/35, displayHeight*50/56, fillButton, fillButton);
-}else{
-  fill(white);
-  strokeWeight(noStroke);
-  rect(displayWidth*20/35, displayHeight*50/56, fillButton, fillButton);
+  rect(displayWidth*62/105, displayHeight*50/56, fillButton, fillButton);
 }
 strokeWeight(2);
 fill(white);
 rect(displayWidth*7/35,displayHeight*49/56, displayWidth*6/35, displayHeight*3/35);
+//
+if(song[currentSong].isPlaying()) image(pause, displayWidth*62/105, displayHeight*50/56, fillButton, fillButton);
+//
+if(!song[currentSong].isPlaying()) image(play, displayWidth*62/105, displayHeight*50/56, fillButton, fillButton);
+//
+image(next, displayWidth*66/105, displayHeight*50/56, fillButton, fillButton);
+//
+image(back, displayWidth*58/105, displayHeight*50/56, fillButton, fillButton);
+//
+image(loop, displayWidth*54/105, displayHeight*50/56, fillButton, fillButton);
 
 }//End GUIDraw
 //
