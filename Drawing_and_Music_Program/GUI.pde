@@ -89,8 +89,8 @@ if(mouseX>=displayWidth*3/35 && mouseX<=displayWidth*3/35+strokeWidth && mouseY>
 fill(violet);
 rect(displayWidth*3/35, displayWidth*3/35, strokeWidth, strokeWidth);
 strokeWeight(0);
-if(mouseX>=displayWidth*4/35 && mouseX<=displayWidth*4/35+strokeWidth && mouseY>= displayWidth*4/35 && mouseY<=displayWidth*3/35+strokeWidth) {strokeWeight(2);} else {
-  strokeWeight(0);}
+if(mouseX>=displayWidth*4/35 && mouseX<=displayWidth*4/35+strokeWidth && mouseY>= displayWidth*3/35 && mouseY<=displayWidth*3/35+strokeWidth) {strokeWeight(2);} else {
+strokeWeight(0);}
 fill(rviolet);
 rect(displayWidth*4/35, displayWidth*3/35, strokeWidth, strokeWidth);
 strokeWeight(0);
