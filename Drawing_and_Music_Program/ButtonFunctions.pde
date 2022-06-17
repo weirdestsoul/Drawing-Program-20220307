@@ -232,42 +232,67 @@ if (mouseX>=displayWidth*4/35 && mouseX<=displayWidth*4/35+fillButton && mouseY>
 if(eraser==true)toolColour=backgroundColour;
 //
 //Line draw
-if (mouseX>=drawingSurfaceX && mouseX<=drawingSurfaceX+drawingSurfaceWidth && mouseY>=drawingSurfaceY && mouseY<=drawingSurfaceY+drawingSurfaceHeight) { 
-  if (drawTool == false) {
+if (mouseX>=drawingSurfaceX && mouseX<=drawingSurfaceX+drawingSurfaceWidth && mouseY>=drawingSurfaceY && mouseY<=drawingSurfaceY+drawingSurfaceHeight){
+    if (drawTool == false) {
     drawTool = true;
   } else {
-    drawTool = false;}}//Button Paper (Drawing Surface)
+    drawTool = false;}}
+//Button Paper (Drawing Surface)
     //Stroke Buttons
-if (mouseX>=displayWidth*1/35 && mouseX<=displayWidth*1/35+strokeWidth && mouseY>=displayWidth*11/35 && mouseY<=displayWidth*11/35+strokeHeight)lineStroke=2;
+if (mouseX>=displayWidth*1/35 && mouseX<=displayWidth*1/35+strokeWidth && mouseY>=displayWidth*11/35 && mouseY<=displayWidth*11/35+strokeHeight){
+  lineStroke=2;
+  select.play();
+  select.rewind();
+}
 //
-if (mouseX>=displayWidth*2/35 && mouseX<=displayWidth*2/35+strokeWidth && mouseY>=displayWidth*11/35 && mouseY<=displayWidth*11/35+strokeHeight)lineStroke=6;
+if (mouseX>=displayWidth*2/35 && mouseX<=displayWidth*2/35+strokeWidth && mouseY>=displayWidth*11/35 && mouseY<=displayWidth*11/35+strokeHeight){
+  lineStroke=6;
+  select.play();
+  select.rewind();
+}
 //
-if (mouseX>=displayWidth*3/35 && mouseX<=displayWidth*3/35+strokeWidth && mouseY>=displayWidth*11/35 && mouseY<=displayWidth*11/35+strokeHeight)lineStroke=10;
+if (mouseX>=displayWidth*3/35 && mouseX<=displayWidth*3/35+strokeWidth && mouseY>=displayWidth*11/35 && mouseY<=displayWidth*11/35+strokeHeight){
+  lineStroke=10;
+  select.play();
+  select.rewind();
+}
 //
-if (mouseX>=displayWidth*4/35 && mouseX<=displayWidth*4/35+strokeWidth && mouseY>=displayWidth*11/35 && mouseY<=displayWidth*11/35+strokeHeight)lineStroke=14;
+if (mouseX>=displayWidth*4/35 && mouseX<=displayWidth*4/35+strokeWidth && mouseY>=displayWidth*11/35 && mouseY<=displayWidth*11/35+strokeHeight){
+lineStroke=14;
+  select.play();
+  select.rewind();
+}
 //Shape Buttons
 if (mouseX>=displayWidth*1/35 && mouseX<=displayWidth*1/35+strokeWidth && mouseY>=displayWidth*514/1295 && mouseY<=displayWidth*514/1295+strokeHeight){
   drawLine=true;
   drawCircle=false;
   drawTriangle=false;
   drawRectangle=false;
+  select.play();
+  select.rewind();
 }
 if (mouseX>=displayWidth*2/35 && mouseX<=displayWidth*2/35+strokeWidth && mouseY>=displayWidth*514/1295 && mouseY<=displayWidth*514/1295+strokeHeight){
   drawLine=false;
   drawCircle=true;
   drawTriangle=false;
   drawRectangle=false;
+  select.play();
+  select.rewind();
 }
 if (mouseX>=displayWidth*3/35 && mouseX<=displayWidth*3/35+strokeWidth && mouseY>=displayWidth*514/1295 && mouseY<=displayWidth*514/1295+strokeHeight){
   drawLine=false;
   drawCircle=false;
   drawTriangle=true;
   drawRectangle=false;
+  select.play();
+  select.rewind();
 }
 if (mouseX>=displayWidth*4/35 && mouseX<=displayWidth*4/35+strokeWidth && mouseY>=displayWidth*514/1295 && mouseY<=displayWidth*514/1295+strokeHeight){
   drawLine=false;
   drawCircle=false;
   drawTriangle=false;
   drawRectangle=true;
+  select.play();
+  select.rewind();
 }
 }//End buttonFunctions

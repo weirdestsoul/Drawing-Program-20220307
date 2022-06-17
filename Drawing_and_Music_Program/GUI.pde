@@ -276,40 +276,73 @@ stroke(black);
 //
 //Shape buttons
 if (mouseX>=displayWidth*1/35 && mouseX<=displayWidth*1/35+strokeWidth && mouseY>=displayWidth*514/1295 && mouseY<=displayWidth*514/1295+strokeHeight){ 
+  stroke(black);
   strokeWeight(2);
   fill(yellow);
   rect(displayWidth*1/35, displayWidth*514/1295, strokeWidth, strokeHeight);
+  stroke(toolColour);
+  strokeWeight(lineStroke);
+  line(displayWidth*1/35+(strokeWidth*1/2), displayWidth*514/1295+(strokeHeight*1/8), displayWidth*1/35+(strokeWidth*1/2), displayWidth*514/1295+(strokeHeight*7/8));
 } else {
+  stroke(black);
   strokeWeight(0);
   fill(white);
   rect(displayWidth*1/35, displayWidth*514/1295, strokeWidth, strokeHeight);
+  stroke(toolColour);
+  strokeWeight(lineStroke);
+  line(displayWidth*1/35+(strokeWidth*1/2), displayWidth*514/1295+(strokeHeight*1/8), displayWidth*1/35+(strokeWidth*1/2), displayWidth*514/1295+(strokeHeight*7/8));
 }
 if (mouseX>=displayWidth*2/35 && mouseX<=displayWidth*2/35+strokeWidth && mouseY>=displayWidth*514/1295 && mouseY<=displayWidth*514/1295+strokeHeight){ 
+  stroke(black);
   strokeWeight(2);
   fill(yellow);
   rect(displayWidth*2/35, displayWidth*514/1295, strokeWidth, strokeHeight);
+  fill(toolColour);
+  stroke(toolColour);
+  ellipse(displayWidth*2/35+(strokeWidth*1/2), displayWidth*514/1295+strokeHeight*1/2, drawingDiameter, drawingDiameter);
 } else {
+  stroke(black);
   strokeWeight(0);
   fill(white);
   rect(displayWidth*2/35, displayWidth*514/1295, strokeWidth, strokeHeight);
+  fill(toolColour);
+  stroke(toolColour);
+  ellipse(displayWidth*2/35+(strokeWidth*1/2), displayWidth*514/1295+strokeHeight*1/2, drawingDiameter, drawingDiameter);
 }
 if (mouseX>=displayWidth*3/35 && mouseX<=displayWidth*3/35+strokeWidth && mouseY>=displayWidth*514/1295 && mouseY<=displayWidth*514/1295+strokeHeight){ 
+  stroke(black);
   strokeWeight(2);
   fill(yellow);
   rect(displayWidth*3/35, displayWidth*514/1295, strokeWidth, strokeHeight);
+  fill(toolColour);
+  stroke(toolColour);
+  triangle(displayWidth*3/35+(strokeWidth*1/2), displayWidth*514/1295+strokeHeight*1/4, displayWidth*3/35+(strokeWidth*1/6), displayWidth*514/1295+strokeHeight*3/4, displayWidth*3/35+(strokeWidth*5/6), displayWidth*514/1295+strokeHeight*3/4);
 } else {
+  stroke(black);
   strokeWeight(0);
   fill(white);
   rect(displayWidth*3/35, displayWidth*514/1295, strokeWidth, strokeHeight);
+  fill(toolColour);
+  stroke(toolColour);
+  triangle(displayWidth*3/35+(strokeWidth*1/2), displayWidth*514/1295+strokeHeight*1/4, displayWidth*3/35+(strokeWidth*1/6), displayWidth*514/1295+strokeHeight*3/4, displayWidth*3/35+(strokeWidth*5/6), displayWidth*514/1295+strokeHeight*3/4);
 }
 if (mouseX>=displayWidth*4/35 && mouseX<=displayWidth*4/35+strokeWidth && mouseY>=displayWidth*514/1295 && mouseY<=displayWidth*514/1295+strokeHeight){ 
+  stroke(black);
   strokeWeight(2);
   fill(yellow);
   rect(displayWidth*4/35, displayWidth*514/1295, strokeWidth, strokeHeight);
+  stroke(toolColour);
+  fill(toolColour);
+  rect(displayWidth*4/35+strokeWidth*1/8, displayWidth*514/1295+strokeHeight*1/8, strokeWidth*6/8, strokeHeight*6/8);
 } else {
+  stroke(black);
   strokeWeight(0);
   fill(white);
   rect(displayWidth*4/35, displayWidth*514/1295, strokeWidth, strokeHeight);
+  stroke(toolColour);
+  fill(toolColour);
+  rect(displayWidth*4/35+strokeWidth*1/8, displayWidth*514/1295+strokeHeight*1/8, strokeWidth*6/8, strokeHeight*6/8);
+  stroke(reset);
 }
 //
 strokeWeight(strokeReset);
@@ -318,6 +351,7 @@ fill(white);
 if (paper==true) GUISetup();
 //
 //Music Progress Bar
+stroke(black);
 rect(displayWidth*16/35, displayHeight*27/28, progressBarWidth, progressBarHeight);
 fill(black);
 rect(displayWidth*16/35, displayHeight*27/28,(float(song[currentSong].position())/float(song[currentSong].length()))*progressBarWidth, progressBarHeight);

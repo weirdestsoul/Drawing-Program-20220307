@@ -15,6 +15,7 @@ AudioPlayer scribble;
 AudioPlayer crumple;
 AudioPlayer erase;
 AudioPlayer click;
+AudioPlayer select;
 AudioMetaData[] songMetaData = new AudioMetaData[numberOfSongs]; 
 int currentSong = numberOfSongs - numberOfSongs;
 void musicSetup () {
@@ -29,6 +30,7 @@ void musicSetup () {
   crumple = minim.loadFile("soundEffects/Crumbling-Paper-3-www.fesliyanstudios.com.mp3");
   erase = minim.loadFile("soundEffects/586466__ldf99__pen-erasing.wav");
   click = minim.loadFile("soundEffects/click.mp3");
+  select = minim.loadFile("soundEffects/select.wav");
   //
   currentSong-=currentSong; 
   for (int i=currentSong; i<song.length; i++) {
