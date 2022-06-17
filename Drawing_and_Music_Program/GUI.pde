@@ -208,39 +208,71 @@ strokeWeight(0);
 if (mouseX>=displayWidth*1/35 && mouseX<=displayWidth*1/35+strokeWidth && mouseY>=displayWidth*11/35 && mouseY<=displayWidth*11/35+strokeHeight){ 
   strokeWeight(2);
   fill(yellow);
+  stroke(black);
   rect(displayWidth*1/35, displayWidth*11/35, strokeWidth, strokeHeight);
+  stroke(toolColour);
+  line(displayWidth*1/35+(strokeWidth*1/2), displayWidth*11/35+(strokeHeight*1/8), displayWidth*1/35+(strokeWidth*1/2), displayWidth*11/35+(strokeHeight*7/8));
 } else {
   strokeWeight(0);
   fill(white);
+  stroke(black);
   rect(displayWidth*1/35, displayWidth*11/35, strokeWidth, strokeHeight);
+  strokeWeight(2);
+  stroke(toolColour);
+  line(displayWidth*1/35+(strokeWidth*1/2), displayWidth*11/35+(strokeHeight*1/8), displayWidth*1/35+(strokeWidth*1/2), displayWidth*11/35+(strokeHeight*7/8));
 }
 if (mouseX>=displayWidth*2/35 && mouseX<=displayWidth*2/35+strokeWidth && mouseY>=displayWidth*11/35 && mouseY<=displayWidth*11/35+strokeHeight){ 
   strokeWeight(2);
   fill(yellow);
+  stroke(black);
   rect(displayWidth*2/35, displayWidth*11/35, strokeWidth, strokeHeight);
+  stroke(toolColour);
+  strokeWeight(6);
+  line(displayWidth*2/35+(strokeWidth*1/2), displayWidth*11/35+(strokeHeight*1/8), displayWidth*2/35+(strokeWidth*1/2), displayWidth*11/35+(strokeHeight*7/8));
 } else {
   strokeWeight(0);
   fill(white);
+  stroke(black);
   rect(displayWidth*2/35, displayWidth*11/35, strokeWidth, strokeHeight);
+  stroke(toolColour);
+  strokeWeight(6);
+  line(displayWidth*2/35+(strokeWidth*1/2), displayWidth*11/35+(strokeHeight*1/8), displayWidth*2/35+(strokeWidth*1/2), displayWidth*11/35+(strokeHeight*7/8));
 }
 if (mouseX>=displayWidth*3/35 && mouseX<=displayWidth*3/35+strokeWidth && mouseY>=displayWidth*11/35 && mouseY<=displayWidth*11/35+strokeHeight){ 
   strokeWeight(2);
   fill(yellow);
+  stroke(black);
   rect(displayWidth*3/35, displayWidth*11/35, strokeWidth, strokeHeight);
+  stroke(toolColour);
+  strokeWeight(10);
+  line(displayWidth*3/35+(strokeWidth*1/2), displayWidth*11/35+(strokeHeight*1/8), displayWidth*3/35+(strokeWidth*1/2), displayWidth*11/35+(strokeHeight*7/8));
 } else {
   strokeWeight(0);
   fill(white);
+  stroke(black);
   rect(displayWidth*3/35, displayWidth*11/35, strokeWidth, strokeHeight);
+  stroke(toolColour);
+  strokeWeight(10);
+  line(displayWidth*3/35+(strokeWidth*1/2), displayWidth*11/35+(strokeHeight*1/8), displayWidth*3/35+(strokeWidth*1/2), displayWidth*11/35+(strokeHeight*7/8));
 }
 if (mouseX>=displayWidth*4/35 && mouseX<=displayWidth*4/35+strokeWidth && mouseY>=displayWidth*11/35 && mouseY<=displayWidth*11/35+strokeHeight){ 
   strokeWeight(2);
   fill(yellow);
+  stroke(black);
   rect(displayWidth*4/35, displayWidth*11/35, strokeWidth, strokeHeight);
+  strokeWeight(14);
+  stroke(toolColour);
+  line(displayWidth*4/35+(strokeWidth*1/2), displayWidth*11/35+(strokeHeight*1/8), displayWidth*4/35+(strokeWidth*1/2), displayWidth*11/35+(strokeHeight*7/8));
 } else {
   strokeWeight(0);
   fill(white);
+  stroke(black);
   rect(displayWidth*4/35, displayWidth*11/35, strokeWidth, strokeHeight);
+  strokeWeight(14);
+  stroke(toolColour);
+  line(displayWidth*4/35+(strokeWidth*1/2), displayWidth*11/35+(strokeHeight*1/8), displayWidth*4/35+(strokeWidth*1/2), displayWidth*11/35+(strokeHeight*7/8));
 }
+stroke(black);
 //
 //Shape buttons
 if (mouseX>=displayWidth*1/35 && mouseX<=displayWidth*1/35+strokeWidth && mouseY>=displayWidth*514/1295 && mouseY<=displayWidth*514/1295+strokeHeight){ 
@@ -252,7 +284,6 @@ if (mouseX>=displayWidth*1/35 && mouseX<=displayWidth*1/35+strokeWidth && mouseY
   fill(white);
   rect(displayWidth*1/35, displayWidth*514/1295, strokeWidth, strokeHeight);
 }
-
 if (mouseX>=displayWidth*2/35 && mouseX<=displayWidth*2/35+strokeWidth && mouseY>=displayWidth*514/1295 && mouseY<=displayWidth*514/1295+strokeHeight){ 
   strokeWeight(2);
   fill(yellow);

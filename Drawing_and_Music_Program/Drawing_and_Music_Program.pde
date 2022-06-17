@@ -2,7 +2,6 @@
 //Global Variables
 //
 void setup() {
-  frameRate(240);
   fullScreen(); //displayWidth, displayHeight
   population();
   musicSetup();

@@ -53,7 +53,13 @@ void musicDraw () {
   song[currentSong].play();
   } 
   } 
-  println(newTime);
+ //
+  if(volumeButton<=0 ){
+    song[currentSong].mute();
+  }else{
+    song[currentSong].unmute();
+  }
+  println(volumeButton);
 }//End musicDraw
 //
 void musicKeyPressed () {
@@ -87,6 +93,7 @@ void musicKeyPressed () {
   if (key=='f' || key=='F') song[currentSong].skip(5000); 
   if (key=='r' || key=='R') song[currentSong].skip(-5000); 
   //Mute button
+  /*
   if (key=='m' ||key=='M') {
   if(song[currentSong].isMuted() ) {
   song[currentSong].unmute();
@@ -94,6 +101,7 @@ void musicKeyPressed () {
     song[currentSong].mute();
   }
 }
+*/
 //
   if(key=='s' || key=='S'){
   if(song[currentSong].isPlaying()) {
@@ -105,6 +113,7 @@ void musicKeyPressed () {
   }
   }//End stop button
   //
+  
   if (key=='n'|| key=='N') {
   if(song[currentSong].isPlaying() && currentSong < trueNumberOfSongs) {
   song[currentSong].pause();

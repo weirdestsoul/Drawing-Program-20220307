@@ -6,18 +6,19 @@ float drawingDiameter;
 float secondTextX, secondTextY, secondTextWidth, secondTextHeight;
 float progressBarHeight, progressBarWidth, setTime, volume, volumeButton;
 int minute1, minute2, seconds1, seconds2, seconds3;
-int strokeReset = 2, noStroke = 0, reset = 1, lineStroke;
+int strokeReset = 2, noStroke = 0, reset = 1, lineStroke, frameRate;
 int newTime;
 String currentTime, totalTime;
 color backgroundColour, toolColour, white = #FFFFFF, lgrey=#8B8B83, dgrey=#585858, resetColour = white, black = 0, quitButtonColour, GUI = #969EA5, blue=#0000FF, red=#FF0000, yellow=#FFE600, green=#2A8917, ygreen=#36FF00, bgreen=#4DAD94, bviolet=#5112C9, violet=#8B12C9, rviolet=#E012BB, rorange=#E03B12, orange=#E07D12, yorange=#E0AA12;
 //
 void population() {
+  frameRate = 240;
   volumeButton=0.5;
   drawingSurfaceX = displayWidth*6/35;
   drawingSurfaceY = displayHeight*0;
-  drawingSurfaceWidth = displayWidth*29/35;
+  drawingSurfaceWidth = displayWidth*30/35;
   drawingSurfaceHeight = displayHeight*6/7;
-  drawingDiameter = displayHeight*1/100;
+  drawingDiameter = displayHeight*1/50;
   quitButtonX = displayWidth*39/40;
   quitButtonY = displayHeight*0;
   quitButtonWidth = displayWidth*1/40; // 2/20=1/10
@@ -41,7 +42,7 @@ void population() {
 void populationDraw() {
   setTime =  float(mouseX-displayWidth*16/35) / float(displayWidth*9/35);
   newTime = int(setTime*song[currentSong].length());
-  volume = float(mouseX-displayWidth*33/35)/35;
+  volume = float(mouseX-displayWidth*33/38);
   if(volumeHeld==true){
     volumeButton = float(mouseX-displayWidth*30/35) / float(displayWidth*4/35); 
     song[currentSong].setGain(volume);
@@ -59,4 +60,6 @@ void populationDraw() {
   currentTime= minute1+":"+seconds2;
   }
   totalTime= minute2+":"+seconds3;
+  //
+  frameRate(frameRate);
 }//End populationDraw
